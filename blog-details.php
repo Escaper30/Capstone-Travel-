@@ -31,7 +31,7 @@
     </div>
 
     <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
+<!--     <div class="offcanvas-menu-overlay"></div>
     <div class="offcanvas-menu-wrapper">
         <div class="offcanvas__option">
             <div class="offcanvas__links">
@@ -61,7 +61,7 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
-    <header class="header">
+<!--     <header class="header">
         <div class="header__top">
             <div class="container">
                 <div class="row">
@@ -126,8 +126,11 @@
             </div>
             <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
-    </header>
+    </header> --> -->
     <!-- Header Section End -->
+     <?php
+        include('header.php');
+    ?>
 
     <!-- Blog Details Hero Begin -->
     <section class="blog-hero spad">
