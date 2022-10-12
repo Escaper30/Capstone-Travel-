@@ -42,8 +42,8 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                                <a href="./login.php">Sign In/Log In</a>
-                                <a href="./faq.php">FAQs</a>
+                                <a href="./register_user.php">Sign Up/Log In</a>
+<!--                                 <a href="./faq.php">FAQs</a> -->
                             </div>
                             <div class="header__top__hover">
                                 <!-- <span>Usd <i class="arrow_carrot-down"></i></span>
@@ -69,7 +69,7 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li class="active"><a href="./index.php">Home</a></li>
-                            <li><a href="./shop.php">Shop</a></li>
+                            <li><a href="#">Shop</a></li>
                             <!-- <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./about.html">About Us</a></li>
@@ -80,7 +80,7 @@
                                 </ul>
                             </li> -->
                             <li><a href="./blog.php">Travel Stories</a></li>
-                            <li ><a href="./contact.php">Contacts</a></li>
+                            <li ><a href="./contact.php">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
