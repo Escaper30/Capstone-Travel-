@@ -44,7 +44,7 @@ class AdminRegister extends Connection{
 class AdminLogin extends Connection{
   public $ad_id;
   public function adminlogin($ad_email, $ad_password){
-    $result = mysqli_query($this->conn, "SELECT * FROM admin WHERE ad_fname = '$ad_fname' OR ad_email = '$ad_email'");
+    $result = mysqli_query($this->conn, "SELECT * FROM admin WHERE ad_email = '$ad_email'");
     $row = mysqli_fetch_assoc($result);
     
     if(mysqli_num_rows($result) > 0){
