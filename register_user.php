@@ -1,3 +1,31 @@
+<?php
+require 'db_conn.php';
+
+if(!empty($_SESSION["id"])){
+  header("Location: register_user.php");
+}
+
+$register = new Register();
+
+if(isset($_POST["submit"])){
+  $result = $register->registration($_POST["fname"], $_POST["lname"], $_POST["country"], $_POST["phone"], $_POST["email"], $_POST["password"],$_POST["confirm"]);
+
+  if($result == 1){
+    echo
+    "<script> alert('Registration Successful'); </script>";
+  }
+  elseif($result == 10){
+    echo
+    "<script> alert('Username or Email Has Already Taken'); </script>";
+  }
+  elseif($result == 100){
+    echo
+    "<script> alert('Password Does Not Match'); </script>";
+  }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -89,29 +117,30 @@
     <section class="checkout spad">
         <div class="container">
             <div class="checkout__form">
-                <form action="#">
+                <form action="" method="post" autocomplete="off">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <!-- <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click
                             here</a> to enter your code</h6> -->
                             <h5 class="checkout__title">Register Here</h5>
+                            
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Fist Name<span>*</span></p>
-                                        <input type="text" pattern="[A-Za-z]{1,32}" required>
+                                        <input type="text" pattern="[A-Za-z]{1,32}" name="fname" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Last Name<span>*</span></p>
-                                        <input type="text" pattern="[A-Za-z]{1,32}" required>
+                                        <input type="text" pattern="[A-Za-z]{1,32}" name="lname" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="checkout__input">
                                 <p>Country<span>*</span></p>
-                                <input type="text" required>
+                                <input type="text" name="country" required>
                             </div>
                             <!-- <div class="checkout__input">
                                 <p>Address<span>*</span></p>
@@ -134,13 +163,25 @@
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Phone<span>*</span></p>
-                                        <input type="text" pattern="[0-9]{10}" required>
+                                        <input type="text" pattern="[0-9]{10}" name="phone" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Email<span>*</span></p>
-                                        <input type="email" required>
+                                        <input type="email" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Password<span>*</span></p>
+                                        <input type="password" name="password" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Password<span>*</span></p>
+                                        <input type="confirm password" name="confirm" required>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +252,7 @@
                             </div> -->
                         </div>
                     </div>
-                    <button type="submit" class="primary-btn">Register<span class="arrow_right"></span></button> 
+                    <button type="submit" name="submit" class="primary-btn">Submit<span class="arrow_right"></span></button> 
                     <a href="#" class="primary-btn">Log In <span class="arrow_right"></span></a>
                 </form>
             </div>
