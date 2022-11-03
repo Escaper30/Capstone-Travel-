@@ -1,3 +1,30 @@
+<?php
+require 'admin_db_conn.php';
+
+if(!empty($_SESSION["ad_id"])){
+  header("Location: register_admin.php");
+}
+
+$register = new AdminRegister();
+
+if(isset($_POST["ad_submit"])){
+  $result = $register->adminregistration($_POST["ad_fname"], $_POST["ad_lname"],  $_POST["ad_phone"], $_POST["ad_email"], $_POST["ad_password"],$_POST["ad_confirm"]);
+
+  if($result == 1){
+    echo
+    "<script> alert('Admin Registration Successful'); </script>";
+  }
+  else if($result == 10){
+    echo
+    "<script> alert('Username or Email Is Already Taken'); </script>";
+  }
+  else if($result == 100){
+    echo
+    "<script> alert('Password Doesn't Match'); </script>";
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -89,7 +116,7 @@
     <section class="checkout spad">
         <div class="container">
             <div class="checkout__form">
-                <form action="#">
+                <form action="" method="post" autocomplete="off">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <!-- <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click
@@ -99,13 +126,13 @@
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Fist Name<span>*</span></p>
-                                        <input type="text" pattern="[A-Za-z]{1,32}" required>
+                                        <input type="text" pattern="[A-Za-z]{1,32}" name="ad_fname" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Last Name<span>*</span></p>
-                                        <input type="text" pattern="[A-Za-z]{1,32}" required>
+                                        <input type="text" pattern="[A-Za-z]{1,32}" name="ad_lname" required>
                                     </div>
                                 </div>
                             </div>
@@ -134,13 +161,25 @@
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Phone<span>*</span></p>
-                                        <input type="text" pattern="[0-9]{10}" required>
+                                        <input type="text" pattern="[0-9]{10}" name="ad_phone" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Email<span>*</span></p>
-                                        <input type="email" required>
+                                        <input type="email" name="ad_email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Password<span>*</span></p>
+                                        <input type="password" name="ad_password" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="checkout__input">
+                                        <p>Password<span>*</span></p>
+                                        <input type="confirm password" name="ad_confirm" required>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +250,7 @@
                             </div> -->
                         </div>
                     </div>
-                    <button type="submit" class="primary-btn">Register<span class="arrow_right"></span></button> 
+                    <button type="submit" name="ad_submit" class="primary-btn">Register<span class="arrow_right"></span></button> 
                     <a href="#" class="primary-btn">Log In <span class="arrow_right"></span></a>
                 </form>
             </div>
