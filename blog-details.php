@@ -7,7 +7,7 @@
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Male-Fashion | Template</title>
+    <title>Eiffel Tower | Voyager</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -138,11 +138,11 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-9 text-center">
                     <div class="blog__hero__text">
-                        <h2>Are you one of the thousands of Iphone owners who has no idea</h2>
+                        <h2>Is Eiffel Tower Overhyped?</h2>
                         <ul>
-                            <li>By Deercreative</li>
+                            <li>By Danny Gross</li>
                             <li>February 21, 2019</li>
-                            <li>8 Comments</li>
+                            <li>5 Comments</li>
                         </ul>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-12">
                     <div class="blog__details__pic">
-                        <img src="img/blog/details/blog-details.jpg" alt="">
+                        <img src="img/product/paris.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -172,30 +172,18 @@
                             </ul>
                         </div>
                         <div class="blog__details__text">
-                            <p>Hydroderm is the highly desired anti-aging cream on the block. This serum restricts the
-                                occurrence of early aging sings on the skin and keeps the skin younger, tighter and
-                                healthier. It reduces the wrinkles and loosening of skin. This cream nourishes the skin
-                                and brings back the glow that had lost in the run of hectic years.</p>
-                            <p>The most essential ingredient that makes hydroderm so effective is Vyo-Serum, which is a
-                                product of natural selected proteins. This concentrate works actively in bringing about
-                                the natural youthful glow of the skin. It tightens the skin along with its moisturizing
-                                effect on the skin. The other important ingredient, making hydroderm so effective is
-                                “marine collagen” which along with Vyo-Serum helps revitalize the skin.</p>
+                            <p>The French capital is one of the most romantic and... depressing places in the world. Even the phrase "Paris symptom" describesto describe the misled expectations of visitors to the city (and not only it). The survey, conducted by the British enterprise Virgin Travel Insurance, revealed that the Eiffel Tower, Paris's iconic landmark, was the worst letdown among the world's tourist attractions. Those who have witnessed it claim that it even appears to be something very commonplace. The best review is still this one.
+                                 Even some tourists refer to the Eiffel Tower as a drab hunk of iron that is surrounded by filth and a lot of people.</p>
+                            <p>Tickets for the tower are too expensive, according to evaluations from thousands of travellers, 25% of them ranked it first on their list of disappointments. In addition, there are so many people there from dawn to evening that it is challenging to find a spot where you may be alone while still enjoying the views of the French capital and snapping a few pictures.</p>
                         </div>
                         <div class="blog__details__quote">
                             <i class="fa fa-quote-left"></i>
-                            <p>“When designing an advertisement for a particular product many things should be
-                                researched like where it should be displayed.”</p>
-                            <h6>_ John Smith _</h6>
+                            <p>“A walk about Paris will provide lessons in history, beauty, and in the point of Life.”</p>
+                            <h6>_ Thomas Jefferson _</h6>
                         </div>
                         <div class="blog__details__text">
-                            <p>Vyo-Serum along with tightening the skin also reduces the fine lines indicating aging of
-                                skin. Problems like dark circles, puffiness, and crow’s feet can be control from the
-                                strong effects of this serum.</p>
-                            <p>Hydroderm is a multi-functional product that helps in reducing the cellulite and giving
-                                the body a toned shape, also helps in cleansing the skin from the root and not letting
-                                the pores clog, nevertheless also let’s sweeps out the wrinkles and all signs of aging
-                                from the sensitive near the eyes.</p>
+                            <p>You should without a doubt climb to the top of the Eiffel Tower if you can find tickets to see it from there. Absolutely. After riding a glass elevator up the tower, the vantage point from which to see Paris is unmatched. In the event that you visit the summit during the day, we advise that you spend about two hours at the tower and think about having lunch there.</p>
+                            <p>Great culture and even greater history may be found in Paris. While Brussels holds the legal title of capital of Belgium, Paris has long served as the nation's capital and continues to be the continent's undisputed cultural hub. Local guides help a city like this come to life. All of a sudden, you are aware of every tale, every intersection, every restaurant, and every action. Beautiful artwork is followed by French Revolution tales at museums. Your trip will be enhanced and made more memorable by participating in one of our trips. In conclusion, visiting or seeing the city of romance is never overrated.</p>
                         </div>
                         <div class="blog__details__option">
                             <div class="row">
@@ -223,13 +211,13 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <a href="" class="blog__details__btns__item">
                                         <p><span class="arrow_left"></span> Previous Pod</p>
-                                        <h5>It S Classified How To Utilize Free Classified Ad Sites</h5>
+                                        <h5>This is how you visit Paris.</h5>
                                     </a>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <a href="" class="blog__details__btns__item blog__details__btns__item--next">
                                         <p>Next Pod <span class="arrow_right"></span></p>
-                                        <h5>Tips For Choosing The Perfect Gloss For Your Lips</h5>
+                                        <h5>Five ways to expolore the musume around the world.</h5>
                                     </a>
                                 </div>
                             </div>
