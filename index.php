@@ -146,8 +146,8 @@
                             <img src="img/products_capstone/0.jpg" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Travel Package 1</h2>
-                            <a href="#">Shop now</a>
+                            <h2>Dubai - Dream come true</h2>
+                            <a href="shop.php">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -157,8 +157,8 @@
                             <img src="img/products_capstone/2.jpg" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Travel Package 2</h2>
-                            <a href="#">Shop now</a>
+                            <h2>Travel to Banff</h2>
+                            <a href="shop.php">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -168,8 +168,8 @@
                             <img src="img/products_capstone/banner3.png" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Travel Package 3</h2>
-                            <a href="#">Shop now</a>
+                            <h2>Maldive to paradise</h2>
+                            <a href="shop.php">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -202,8 +202,8 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6>Piqué Biker Jacket</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <h6>Dubai - Dream come true</h6>
+                            <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
@@ -211,7 +211,7 @@
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$67.24</h5>
+                            <h5>$299.00</h5>
                             <!-- <div class="product__color__select">
                                 <label for="pc-1">
                                     <input type="radio" id="pc-1">
@@ -237,7 +237,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6>Egypt</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
@@ -245,7 +245,7 @@
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$67.24</h5>
+                            <h5>$</h5>
                             <!-- <div class="product__color__select">
                                 <label for="pc-4">
                                     <input type="radio" id="pc-4">
@@ -271,8 +271,8 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6>Multi-pocket Chest Bag</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <h6>Maldives - the paradise</h6>
+                            <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -280,7 +280,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$43.48</h5>
+                            <h5>$</h5>
                             <!-- <div class="product__color__select">
                                 <label for="pc-7">
                                     <input type="radio" id="pc-7">
@@ -305,8 +305,8 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6>Diagonal Textured Cap</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <h6>Thailand</h6>
+                            <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
@@ -314,7 +314,7 @@
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$60.9</h5>
+                            <h5>$</h5>
                             <!-- <div class="product__color__select">
                                 <label for="pc-10">
                                     <input type="radio" id="pc-10">
@@ -329,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="img/product/turkey1.jpg">
                             <ul class="product__hover">
@@ -340,7 +340,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6>Lether Backpack</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
@@ -348,7 +348,7 @@
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$31.37</h5>
+                            <h5>$31.37</h5> -->
                             <!-- <div class="product__color__select">
                                 <label for="pc-13">
                                     <input type="radio" id="pc-13">
@@ -363,7 +363,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item sale">
                         <div class="product__item__pic set-bg" data-setbg="img/product/Nepal1.jpg">
                             <span class="label">Sale</span>
@@ -375,7 +375,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6>Ankle Boots</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -383,7 +383,7 @@
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$98.49</h5>
+                            <h5>$98.49</h5> -->
                             <!-- <div class="product__color__select">
                                 <label for="pc-16">
                                     <input type="radio" id="pc-16">
@@ -398,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="img/product/South_africa1.jpg">
                             <ul class="product__hover">
@@ -409,7 +409,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6>T-shirt Contrast Pocket</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
@@ -417,7 +417,7 @@
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$49.66</h5>
+                            <h5>$49.66</h5> -->
                             <!-- <div class="product__color__select">
                                 <label for="pc-19">
                                     <input type="radio" id="pc-19">
@@ -432,7 +432,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="img/product/india1.jpg">
                             <ul class="product__hover">
@@ -443,7 +443,7 @@
                         </div>
                         <div class="product__item__text">
                             <h6>Basic Flowing Scarf</h6>
-                            <a href="#" class="add-cart">+ Add To Cart</a>
+                            <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
@@ -451,7 +451,7 @@
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$26.28</h5>
+                            <h5>$26.28</h5> -->
                             <!-- <div class="product__color__select">
                                 <label for="pc-22">
                                     <input type="radio" id="pc-22">
@@ -563,8 +563,8 @@
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-5.jpg"></div>
                         <div class="blog__item__text">
                             <span><img src="img/icon/calendar.png" alt=""> 16 February 2020</span>
-                            <h5>Travel Story title 1</h5>
-                            <a href="#">Read More</a>
+                            <h5>Volcanic Island - Santorini Greece</h5>
+                            <a href="blog.php">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -573,8 +573,8 @@
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-6.jpg"></div>
                         <div class="blog__item__text">
                             <span><img src="img/icon/calendar.png" alt=""> 21 February 2020</span>
-                            <h5>Travel Story title 2</h5>
-                            <a href="#">Read More</a>
+                            <h5>Taj Mahal - Why a Wonder of World?</h5>
+                            <a href="blog.php">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -583,8 +583,8 @@
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg"></div>
                         <div class="blog__item__text">
                             <span><img src="img/icon/calendar.png" alt=""> 28 February 2020</span>
-                            <h5>Travel Story title 3</h5>
-                            <a href="#">Read More</a>
+                            <h5>Father-Son go on Trip to Banff</h5>
+                            <a href="blog.php">Read More</a>
                         </div>
                     </div>
                 </div>
