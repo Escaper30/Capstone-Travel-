@@ -127,7 +127,6 @@ if(isset($_POST["submit"])){
                         </div>
                     </div>
                     <button type="submit" name="submit" class="primary-btn">Submit<span class="arrow_right"></span></button> 
-                    <a href="#" class="primary-btn">Log In <span class="arrow_right"></span></a>
                 </form>
                     </div>
                 </div>
