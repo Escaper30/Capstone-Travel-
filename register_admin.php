@@ -251,7 +251,7 @@ if(isset($_POST["ad_submit"])){
                         </div>
                     </div>
                     <button type="submit" name="ad_submit" class="primary-btn">Register<span class="arrow_right"></span></button> 
-                    <a href="#" class="primary-btn">Log In <span class="arrow_right"></span></a>
+                    <a href="login_admin.php" class="primary-btn">Log In <span class="arrow_right"></span></a>
                 </form>
             </div>
         </div>
