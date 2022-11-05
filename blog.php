@@ -1,4 +1,21 @@
-<!-- Dimple Thawani -->
+<?php
+require 'db_conn.php';
+
+$select = new Select();
+
+if(!empty($_SESSION["id"])){
+  $user = $select->selectUserById($_SESSION["id"]);
+  include('loggedin_header.php');
+ 
+}
+// else if(empty($_SESSION["id"])){
+//     header("Location: index.php");
+// }
+else{
+//   header("Location: register_user.php");
+  include('top_header.php');
+}
+?> 
 
 <!DOCTYPE html>
 <html lang="zxx">
@@ -46,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Our Blog</h2>
+                    <h2>Travel Stories</h2>
                 </div>
             </div>
         </div>
@@ -58,7 +75,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
-                        <h4>Check Out</h4>
+                        <h4>Travel Stories</h4>
                         <div class="breadcrumb__links">
                             <a href="./index.html">Home</a>
                             <a href="./shop.html">Shop</a>
@@ -93,7 +110,7 @@
                         <div class="blog__item__text">
                             <span><img src="img/icon/calendar.png" alt=""> 21 February 2020</span>
                             <h5>Is Eiffel Tower Overhyped?</h5>
-                            <a href="#">Read More</a>
+                            <a href="blog-details.php">Read More</a>
                         </div>
                     </div>
                 </div>

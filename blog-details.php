@@ -1,3 +1,22 @@
+<?php
+require 'db_conn.php';
+
+$select = new Select();
+
+if(!empty($_SESSION["id"])){
+  $user = $select->selectUserById($_SESSION["id"]);
+  include('loggedin_header.php');
+ 
+}
+// else if(empty($_SESSION["id"])){
+//     header("Location: index.php");
+// }
+else{
+//   header("Location: register_user.php");
+  include('top_header.php');
+}
+?> 
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -58,7 +77,7 @@
             <p>Free shipping, 30-day return or refund guarantee.</p>
         </div>
     </div>
-    <!-- Offcanvas Menu End -->
+    Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
 <!--     <header class="header">
@@ -126,7 +145,7 @@
             </div>
             <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
-    </header> --> -->
+    </header> -->  
     <!-- Header Section End -->
      <?php
         include('header.php');
@@ -157,7 +176,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-12">
                     <div class="blog__details__pic">
-                        <img src="img/product/paris.jpg" alt="">
+                        <img src="img/blog/1.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-lg-8">

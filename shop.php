@@ -1,3 +1,21 @@
+<?php
+require 'db_conn.php';
+
+$select = new Select();
+
+if(!empty($_SESSION["id"])){
+  $user = $select->selectUserById($_SESSION["id"]);
+  include('loggedin_header.php');
+ 
+}
+// else if(empty($_SESSION["id"])){
+//     header("Location: index.php");
+// }
+else{
+//   header("Location: register_user.php");
+  include('top_header.php');
+}
+?> 
 <!DOCTYPE html>
 <html lang="zxx">
 

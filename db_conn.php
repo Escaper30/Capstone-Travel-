@@ -74,6 +74,25 @@ class Select extends Connection{
   }
 }
 
+class contact extends Connection{
+  public function contact($fname, $lname, $email, $message,){
+    $duplicate = mysqli_query($this->conn, "SELECT * FROM contact WHERE fname = '$fname'");
+    if(mysqli_num_rows($duplicate) > 0){
+      return 10;
+     
+    }
+    else{
+     
+        $query = "INSERT INTO contact VALUES('', '$fname','$lname','$email', '$message')";
+        mysqli_query($this->conn, $query);
+        return 1;
+       
+   
+      
+    }
+  }
+}
+
 
 
 // class Add_category extends Connection{

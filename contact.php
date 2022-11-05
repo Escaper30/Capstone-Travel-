@@ -86,7 +86,7 @@ if(isset($_POST["submit"])){
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="contact__form">
-                        <form action="" method="post" autocomplete="off">
+                        <form action="" method="post" autocomplete="off" id="contact">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <!-- <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click
@@ -96,7 +96,7 @@ if(isset($_POST["submit"])){
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
-                                        <p>Fist Name<span>*</span></p>
+                                        <p>First Name<span>*</span></p>
                                         <input type="text" pattern="[A-Za-z]{1,32}" name="fname" required>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@ if(isset($_POST["submit"])){
                                 <div class="col-lg-20">
                                     <div class="checkout__input">
                                         <p>Message<span>*</span></p>
-                                        <input type="textarea" pattern="[A-Za-z]{1,32}" name="message" required>
+                                        <input type="textarea" name="message" required>
                                     </div>
                                 </div>
                             </div>
