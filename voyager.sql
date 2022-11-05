@@ -61,7 +61,26 @@ ALTER TABLE `admin`
 ALTER TABLE `admin`
   MODIFY `ad_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `fname` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `message` varchar(50) NOT NULL
+    
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+
+INSERT INTO `contact` (`id`, `fname`, `lname`, `email`, `message`) VALUES
+(4, 'David', 'garcia','david@Gmail.com', 'nk');
+
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
@@ -70,4 +89,5 @@ COMMIT;
 
 select *from user;
 select * from admin;
+select * from contact;
 
