@@ -179,7 +179,7 @@ if(isset($_POST["ad_submit"])){
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Password<span>*</span></p>
-                                        <input type="confirm password" name="ad_confirm" required>
+                                        <input type="password" name="ad_confirm" required>
                                     </div>
                                 </div>
                             </div>
