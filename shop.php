@@ -5,7 +5,7 @@ $select = new Select();
 
 if(!empty($_SESSION["id"])){
   $user = $select->selectUserById($_SESSION["id"]);
-  include('loggedin_header.php');
+  include('includes/loggedin_header.php');
  
 }
 // else if(empty($_SESSION["id"])){
@@ -13,7 +13,7 @@ if(!empty($_SESSION["id"])){
 // }
 else{
 //   header("Location: register_user.php");
-  include('top_header.php');
+  include('includes/top_header.php');
 }
 ?> 
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ else{
 
      <!-- Header Section Begin -->
      <?php
-        include('header.php');
+        include('includes/header.php');
     ?>
     <!-- Header Section End -->
    
@@ -814,24 +814,24 @@ else{
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="footer__copyright__text">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p>Copyright ©
+                  Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <!-- <p>Copyright ©
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>2020
                             All rights reserved | This template is made with <i class="fa fa-heart-o"
                             aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                        </p>
+                        </p> -->
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </div>
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer> 
     <!-- Footer Section End -->
 
     <?php
-        include('footer.php');
+        include('includes/footer.php');
     ?>
     <!-- Search Begin -->
     <div class="search-model">

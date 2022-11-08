@@ -5,7 +5,7 @@ $select = new Select();
 
 if(!empty($_SESSION["id"])){
   $user = $select->selectUserById($_SESSION["id"]);
-  include('loggedin_header.php');
+  include('includes/loggedin_header.php');
  
 }
 // else if(empty($_SESSION["id"])){
@@ -13,7 +13,7 @@ if(!empty($_SESSION["id"])){
 // }
 else{
 //   header("Location: register_user.php");
-  include('top_header.php');
+  include('includes/top_header.php');
 }
 ?> 
 
@@ -54,7 +54,7 @@ else{
 
     <!-- Header Section Begin -->
     <?php
-        include('header.php');
+        include('includes/header.php');
     ?>
     <!-- Header Section End -->
 
@@ -192,7 +192,7 @@ else{
 
     <!-- Footer Section Begin -->
      <?php
-        include('footer.php');
+        include('incudes/footer.php');
     ?>
     <!-- Footer Section End -->
 

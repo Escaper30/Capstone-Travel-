@@ -1,20 +1,46 @@
+<!-- <?php
+// require 'db_conn.php';
+
+// if(!empty($_SESSION["id"])){
+//   header("Location: contact.php");
+// }
+
+// $contact = new contact();
+
+// if(isset($_POST["submit"])){
+//   $result = $contact->contact($_POST["fname"],$_POST["lname"], $_POST["email"], $_POST["message"],);
+
+// }
+?> -->
+
 <?php
 require 'db_conn.php';
 
+$select = new Select();
+
 if(!empty($_SESSION["id"])){
-  header("Location: contact.php");
+  $user = $select->selectUserById($_SESSION["id"]);
+  include('includes/loggedin_header.php');
+ 
+}
+// else if(empty($_SESSION["id"])){
+//     header("Location: index.php");
+// }
+else{
+//   header("Location: register_user.php");
+  include('includes/top_header.php');
 }
 
 $contact = new contact();
 
 if(isset($_POST["submit"])){
   $result = $contact->contact($_POST["fname"],$_POST["lname"], $_POST["email"], $_POST["message"],);
-
 }
-?>
+?> 
 
 
-<!--Dhiraj Wadhwani -->
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -51,7 +77,7 @@ if(isset($_POST["submit"])){
 
     <!-- Header Section Begin -->
     <?php
-        include('header.php');
+        include('includes/header.php');
     ?>
     <!-- Header Section End -->
 
@@ -137,7 +163,7 @@ if(isset($_POST["submit"])){
 
     <!-- Footer Section Begin -->
     <?php
-        include('footer.php');
+        include('includes/footer.php');
     ?>
 
     <!-- Footer Section End -->

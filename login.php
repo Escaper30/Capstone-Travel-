@@ -96,7 +96,7 @@ if(isset($_POST["submit"])){
 
     <!-- Header Section Begin -->
     <?php
-        include('header.php');
+        include('includes/header.php');
     ?>
     <!-- Header Section End -->
 
@@ -222,7 +222,7 @@ if(isset($_POST["submit"])){
 
     <!-- Footer Section Begin -->
     <?php
-        include('footer.php');
+        include('includes/footer.php');
     ?>
     <!-- Footer Section End -->
 
