@@ -248,8 +248,7 @@ if(isset($_POST["pr_submit"])){
                         </div>
                     </div>
                     <button type="submit" name="pr_submit" class="primary-btn">Add Products<span class="arrow_right"></span></button> 
-                    <a href="add_product.php" class="primary-btn">Log In <span class="arrow_right"></span></a>
-                </form>
+              </form>
             </div>
         </div>
     </section>
