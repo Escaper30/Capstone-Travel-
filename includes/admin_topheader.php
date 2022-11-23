@@ -43,9 +43,9 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li class="active"><a href="./index.php">Home</a></li>
-                            <li><a href="#">Shop</a>
+                            <li><a href="#">Products</a>
                                 <ul class="dropdown">
-                                    <li><a href="./about.html">Add Products</a></li>
+                                    <li><a href="./add_product.php">Add Products</a></li>
                                     <li><a href="./shop-details.html">Update Products</a></li>
                                     <li><a href="./shopping-cart.html">Delete Products</a></li>
                                 </ul>
@@ -59,7 +59,6 @@
                             </li>
                             <li><a href="#">User</a>
                                 <ul class="dropdown">
-                                    
                                     <li><a href="./shopping-cart.html">Delete User</a></li>
                                 </ul>
                             </li>

@@ -9,7 +9,7 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                            <a href="#">Welcome <?php echo $admin["ad_fname"];  ?>&#9973;</a><a href="./logout_admin.php">Log Out</a>
+                            <a href="#">Welcome Admin <?php echo $admin["ad_fname"];  ?>&#9973;</a><a href="./logout_admin.php">Log Out</a>
 <!--                                 <a href="./faq.php">FAQs</a> -->
                             </div>
                             <div class="header__top__hover">
