@@ -1,17 +1,4 @@
-<!-- <?php
-// require 'db_conn.php';
 
-// if(!empty($_SESSION["id"])){
-//   header("Location: contact.php");
-// }
-
-// $contact = new contact();
-
-// if(isset($_POST["submit"])){
-//   $result = $contact->contact($_POST["fname"],$_POST["lname"], $_POST["email"], $_POST["message"],);
-
-// }
-?> -->
 
 <?php
 require 'db_conn.php';
@@ -45,6 +32,10 @@ if(isset($_POST["submit"])){
 <html lang="zxx">
 
 <head>
+<?php
+        include('includes/modalcss.php');
+        
+    ?>
     <meta charset="UTF-8">
     <meta name="description" content="Male_Fashion Template">
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
@@ -72,6 +63,11 @@ if(isset($_POST["submit"])){
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
+    <?php
+        include('includes/modalcontent.php');
+        
+    ?>
 
 
 
@@ -190,6 +186,10 @@ if(isset($_POST["submit"])){
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <?php
+        include('includes/modalscripts.php');
+        
+    ?>
 </body>
 
 </html>

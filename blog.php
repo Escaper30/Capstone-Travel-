@@ -21,6 +21,12 @@ else{
 <html lang="zxx">
 
 <head>
+
+
+<?php
+        include('includes/modalcss.php');
+        
+    ?>
     <meta charset="UTF-8">
     <meta name="description" content="Male_Fashion Template">
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
@@ -48,6 +54,11 @@ else{
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
+    <?php
+        include('includes/modalcontent.php');
+        
+    ?>
 
     <!-- Offcanvas Menu Begin -->
     <!-- Offcanvas Menu End -->
@@ -218,6 +229,10 @@ else{
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <?php
+        include('includes/modalscripts.php');
+        
+    ?>
 </body>
 
 </html>

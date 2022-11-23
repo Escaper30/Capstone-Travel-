@@ -13,7 +13,29 @@ class Connection{
   public function __construct(){
     $this->conn = mysqli_connect($this->host, $this->user, $this->password, $this->db_name);
   }
+
+  function get_users() {
+    $query = 'SELECT * FROM travelstories;';
+    $result = @mysqli_query($this->conn,$query);
+    return $result;
+  }
   
+
+//   function delete_stories($id) {
+            
+//     $id_clean = $this->prepare_string($id);
+//     $query = "DELETE FROM travelstories WHERE id = ? ;";
+//     $stmt = mysqli_prepare($this->conn, $query);
+//     mysqli_stmt_bind_param(
+//         $stmt,
+//         's',
+//         $id_clean
+//     );
+    
+//     $result = mysqli_stmt_execute($stmt);
+
+//     return $result;
+// }
 
 }
 
@@ -86,12 +108,78 @@ class contact extends Connection{
         $query = "INSERT INTO contact VALUES('', '$fname','$lname','$email', '$message')";
         mysqli_query($this->conn, $query);
         return 1;
-       
-   
-      
+    
     }
   }
 }
+
+class travelstories extends Connection{
+  public function travelstories($travelimage , $traveltitle, $traveldisc, $travelspec, $postby){
+    $duplicate = mysqli_query($this->conn, "SELECT * FROM travelstories WHERE traveltitle = '$traveltitle'");
+    if(mysqli_num_rows($duplicate) > 0){
+      return 10;
+     
+    }
+    else{
+     
+        $query = "INSERT INTO travelstories VALUES('', '$travelimage','$traveltitle','$traveldisc', '$travelspec','$postby')";
+        mysqli_query($this->conn, $query);
+        return 1;
+    
+    }
+  }
+}
+
+class deletestories extends Connection{
+  public function deletestories($id){
+  
+  
+          $query =  mysqli_query($this->conn, "DELETE FROM travelstories WHERE id = $id ;");
+          
+          return $query;
+   
+    }
+  }
+
+
+  class getstories extends Connection{
+    public function getstories($id){
+    $query =  mysqli_query($this->conn, "SELECT * FROM travelstories WHERE id = $id ;");
+    return $query;
+  }
+}
+
+
+class updatestories extends Connection{
+  public function updatestories($id, $travelimage, $traveltitle, $traveldisc, $travelspec, $postby){
+     $sql= "UPDATE travelstories SET travelimage = '$travelimage', traveltitle = '$traveltitle', traveldisc = '$traveldisc', travelspec = '$travelspec', postby = '$postby' WHERE  id = '$id';";
+    echo $sql;
+     $query = mysqli_query($this->conn, $sql);
+
+  // $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE product_id = $product_id ;");
+  return $query;
+}
+}
+
+class updateprofile extends Connection{
+  public function updateprofile($id, $fname, $lname, $country, $phone, $email){
+     $sql= "UPDATE user SET fname = '$fname', lname = '$lname', country = '$country', phone = '$phone', email = '$email' WHERE  id = '$id';";
+    echo $sql;
+     $query = mysqli_query($this->conn, $sql);
+
+  // $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE product_id = $product_id ;");
+  return $query;
+}
+}
+
+
+// class get_users extends Connection{
+//   public function get_users(){
+//     $result = mysqli_query($this->conn, "SELECT * FROM travelstories;");
+//     return mysqli_fetch_assoc($result);
+//   }
+// }
+
 
 
 

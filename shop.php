@@ -20,6 +20,12 @@ else{
 <html lang="zxx">
 
 <head>
+
+
+<?php
+        include('includes/modalcss.php');
+        
+    ?>
     <meta charset="UTF-8">
     <meta name="description" content="Male_Fashion Template">
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
@@ -40,6 +46,8 @@ else{
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+     
+
 </head>
 
 <body>
@@ -47,6 +55,12 @@ else{
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
+    
+    <?php
+        include('includes/modalcontent.php');
+        
+    ?>
 
     <!-- Offcanvas Menu Begin -->
     <!-- <div class="offcanvas-menu-overlay"></div>
@@ -79,6 +93,7 @@ else{
     <!-- Offcanvas Menu End -->
 
      <!-- Header Section Begin -->
+
      <?php
         include('includes/header.php');
     ?>
@@ -855,6 +870,11 @@ else{
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+    <?php
+        include('includes/modalscripts.php');
+        
+    ?>
 </body>
 
 </html>
