@@ -42,8 +42,8 @@
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.php">Home</a></li>
-                            <li><a href="./shop.php">Shop</a></li>
+                            <li class="active"><a href="./user_profile.php">Profile</a></li>
+                            <li><a href="./user_portal.php">Add</a></li>
                             <!-- <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./about.html">About Us</a></li>
@@ -53,8 +53,8 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li> -->
-                            <li><a href="./blog.php">Travel Stories</a></li>
-                            <li ><a href="./contact.php">Contact Us</a></li>
+                            <li><a href="./user_viewstories.php">View </a></li>
+                            <li ><a href="./contact.php">Update</a></li>
                         </ul>
                     </nav>
                 </div>

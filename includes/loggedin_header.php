@@ -9,7 +9,7 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                            <a href="#">Welcome <?php echo $user["fname"];  ?>&#9973;</a><a href="./logout.php">Log Out</a>
+                            <a href="#" id="myBtn">Welcome <?php echo $user["fname"];  ?>&#9973;</a><a href="./logout.php">Log Out</a>
 <!--                                 <a href="./faq.php">FAQs</a> -->
                             </div>
                             <div class="header__top__hover">
