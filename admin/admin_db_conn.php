@@ -76,4 +76,21 @@ class AdminSelect extends Connection{
   }
 }
 
+class AddProducts extends Connection{
+  public function addproducts($pr_title, $pr_place, $pr_cost, $pr_details, $pr_image){
+    $pr_duplicate = mysqli_query($this->conn, "SELECT * FROM products WHERE pr_title = '$pr_title'");
+    if(mysqli_num_rows($pr_duplicate) > 0){
+      return 10;
+      // Username or email is already taken
+    }
+    else{
+      
+        $pr_query = "INSERT INTO products VALUES('', '$pr_title', '$pr_place', '$pr_cost', '$pr_details', '$pr_image')";
+        mysqli_query($this->conn, $pr_query);
+        return 1;
+     
+    }
+  }
+}
+
 
