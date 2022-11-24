@@ -124,6 +124,15 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+drop table newsletter;
+CREATE TABLE `newsletter` (
+  `id` int(11) NOT NULL,
+  `email` varchar(250) NOT NULL
+ 
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+SELECT * FROM newsletter;
+
 
 select *from user;
 select * from admin;
