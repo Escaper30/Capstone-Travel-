@@ -82,12 +82,60 @@ ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
+drop table if exists travelstories;
+CREATE TABLE `travelstories` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `travelimage` varchar(255) NOT NULL,
+  `traveltitle` varchar(255) NOT NULL,
+  `traveldisc` varchar(255) NOT NULL,
+  `travelspec` varchar(255) NOT NULL,
+  `postby` varchar(255) NOT NULL,
+  
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8mb4;
+
+SELECT * FROM travelstories;
+CREATE TABLE `products` (
+  `pr_id` int(11) NOT NULL,
+  `pr_title` varchar(50) NOT NULL,
+  `pr_place` varchar(50) NOT NULL,
+  `pr_cost` double NOT NULL,
+  `pr_details` varchar(500) NOT NULL,
+  `pr_image` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `products` (`pr_id`, `pr_title`, `pr_place`, `pr_cost`, `pr_details`, `pr_image`) VALUES
+(2, 'Maldives - Awesome place', 'Maldives', 255, 'Maldives', 'img/product/maldives.jpg');
+-- (2, 'MICROSOFT Surface Pro 4 & Typecover - 128 GB', 799, 'images/2.jpg'),
+-- (3, 'DELL Inspiron 15 5000 15.6', 599, 'images/3.jpg'),
+-- (4, 'LENOVO Ideapad 320s-14IKB 14\" Laptop - Grey', 399, 'images/4.jpg'),
+-- (5, 'ASUS Transformer Mini T102HA 10.1\" 2 in 1 - Silver', 549.99, 'images/5.jpg'),
+-- (6, 'DELL Inspiron 15 5000 15', 449.99, 'images/6.jpg');
+
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`pr_id`);
+
+ALTER TABLE `products`
+  MODIFY `pr_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+drop table if exists newsletter;
+CREATE TABLE `newsletter` (
+  `id` int(11) NOT NULL,
+  `email` varchar(250) NOT NULL
+ 
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+SELECT * FROM newsletter;
 
 
 select *from user;
 select * from admin;
 select * from contact;
+select * from products;
 
