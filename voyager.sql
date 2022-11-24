@@ -122,7 +122,7 @@ CREATE TABLE `products` (
 
 
 INSERT INTO `products` (`pr_id`, `pr_title`, `pr_place`, `pr_cost`, `pr_details`, `pr_image`) VALUES
-(1, 'DELL Inspiron 15 7000 15.6', 'Maldives', 899, 'Qwerty', 'images/1.jpg');
+(2, 'Maldives - Awesome place', 'Maldives', 255, 'Maldives', 'img/product/maldives.jpg');
 -- (2, 'MICROSOFT Surface Pro 4 & Typecover - 128 GB', 799, 'images/2.jpg'),
 -- (3, 'DELL Inspiron 15 5000 15.6', 599, 'images/3.jpg'),
 -- (4, 'LENOVO Ideapad 320s-14IKB 14\" Laptop - Grey', 399, 'images/4.jpg'),
@@ -153,5 +153,5 @@ SELECT * FROM newsletter;
 select *from user;
 select * from admin;
 select * from contact;
-select * from products;
+select * from checkout;
 
