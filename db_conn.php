@@ -173,6 +173,24 @@ class updateprofile extends Connection{
 }
 
 
+class newsletter extends Connection{
+  public function newsletter($email ){
+    $duplicate = mysqli_query($this->conn, "SELECT * FROM newsletter WHERE email = '$email'");
+    if(mysqli_num_rows($duplicate) > 0){
+      return 10;
+     
+    }
+    else{
+     
+        $query = "INSERT INTO newsletter VALUES('', '$email')";
+        mysqli_query($this->conn, $query);
+        return 1;
+    
+    }
+  }
+}
+
+
 // class get_users extends Connection{
 //   public function get_users(){
 //     $result = mysqli_query($this->conn, "SELECT * FROM travelstories;");
