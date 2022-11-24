@@ -1,3 +1,21 @@
+<?php
+require 'db_conn.php';
+
+$select = new Select();
+
+if(!empty($_SESSION["id"])){
+  $user = $select->selectUserById($_SESSION["id"]);
+  include('includes/loggedin_header.php');
+ 
+}
+// else if(empty($_SESSION["id"])){
+//     header("Location: index.php");
+// }
+else{
+//   header("Location: register_user.php");
+  include('includes/top_header.php');
+}
+?> 
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -7,7 +25,7 @@
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Male-Fashion | Template</title>
+    <title>Checkout | Voyager</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -62,7 +80,7 @@
 
     <!-- Header Section Begin -->
     <?php
-        include('header.php');
+        include('includes/shopheader.php');
     ?>
     <!-- Header Section End -->
 
@@ -175,14 +193,14 @@
                                 <h4 class="order__title">Your order</h4>
                                 <div class="checkout__order__products">Product <span>Total</span></div>
                                 <ul class="checkout__total__products">
-                                    <li>Travel Package 1 <span>$ 700.0</span></li>
-                                    <li>German Travel Package <span>$ 570.0</span></li>
+                                    <li>Petra x 3<span>$ 300.0</span></li>
+                                    <!-- <li>German Travel Package <span>$ 570.0</span></li>
                                     <li>autumn Package <span>$ 470.0</span></li>
-                                    <li>mini Package <span>$ 210.0</span></li>
+                                    <li>mini Package <span>$ 210.0</span></li> -->
                                 </ul>
                                 <ul class="checkout__total__all">
-                                    <li>Subtotal <span>$750.99</span></li>
-                                    <li>Total <span>$750.99</span></li>
+                                    <!-- <li>Subtotal <span>$750.99</span></li> -->
+                                    <li>Total <span>$900.00</span></li>
                                 </ul>
                                 <div class="checkout__input__checkbox">
                                     <label for="acc-or">
@@ -219,7 +237,7 @@
 
     <!-- Footer Section Begin -->
     <?php
-        include('footer.php');
+        include('includes/footer.php');
     ?>
     <!-- Footer Section End -->
 

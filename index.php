@@ -149,7 +149,7 @@ else{
     </div>
     <?php
         include('includes/modalcontent.php');
-        
+        include('includes/chatsupportapi.php');
     ?>
     <!-- modal testing -->
     <!-- <div id="myModal" class="modal"> -->

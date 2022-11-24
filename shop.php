@@ -12,7 +12,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Simple Shopping Cart using Session in PHP</title>
+	<title>Shop | Voyager</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<style>
 		.product_image{
