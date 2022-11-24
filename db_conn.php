@@ -207,7 +207,22 @@ class newsletter extends Connection{
   }
 }
 
-
+class checkout extends Connection{
+  public function checkout($fname, $lname, $address, $country, $zip, $phone, $email,){
+    $duplicate = mysqli_query($this->conn, "SELECT * FROM checkout WHERE fname = '$fname'");
+    if(mysqli_num_rows($duplicate) > 0){
+      return 10;
+     
+    }
+    else{
+     
+        $query = "INSERT INTO checkout VALUES('', '$fname', '$lname', '$address', '$country', '$zip', '$phone', '$email')";
+        mysqli_query($this->conn, $query);
+        return 1;
+    
+    }
+  }
+}
 // class get_users extends Connection{
 //   public function get_users(){
 //     $result = mysqli_query($this->conn, "SELECT * FROM travelstories;");
