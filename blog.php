@@ -15,6 +15,10 @@ else{
 //   header("Location: register_user.php");
   include('includes/top_header.php');
 }
+
+$connection = new Connection();
+$result = $connection->get_users();
+
 ?> 
 
 <!DOCTYPE html>
@@ -101,31 +105,52 @@ else{
 
     <!-- Breadcrumb Section End -->
 
-    <!-- Blog Section Begin -->
-    <section class="blog spad">
+
+    <?php
+                    $sr_no = 0;
+                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+                        ?>
+
+         <section class="blog spad">
         <div class="container">
-            <div class="row">
-                <!-- <div class="col-lg-4 col-md-6 col-sm-6">
+           
+                
+                
                     <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-1.jpeg"></div>
+                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpeg"></div>
                         <div class="blog__item__text">
-                            <span><img src="img/icon/calendar.png" alt=""> 16 February 2020</span>
-                            <h5>What Curling Irons Are The Best Ones</h5>
-                            <a href="#">Read More</a>
+                            <span><img src="img/icon/calendar.png" alt=""> 21 February 2020</span>
+                            <h5><?php echo $row['traveltitle']; ?></h5>
+                            <a href="blog-details.php">Read More</a>
                         </div>
                     </div>
-                </div> -->
+                    </div>
+                </div>
+                <?php
+                        // echo $str_to_print;
+
+                    }
+                ?>
+                
+        </div>
+    </section>
+
+    <!-- Blog Section Begin -->
+    <!-- <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="blog__item">
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpeg"></div>
                         <div class="blog__item__text">
                             <span><img src="img/icon/calendar.png" alt=""> 21 February 2020</span>
-                            <h5>Is Eiffel Tower Overhyped?</h5>
+                            <h5></h5>
                             <a href="blog-details.php">Read More</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="blog__item">
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg"></div>
                         <div class="blog__item__text">
@@ -134,8 +159,8 @@ else{
                             <a href="#">Read More</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="blog__item">
                         <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-4.jpg"></div>
                         <div class="blog__item__text">
@@ -174,7 +199,7 @@ else{
                             <a href="#">Read More</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
                 <!-- <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="blog__item">
@@ -196,14 +221,14 @@ else{
                         </div>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div>
         </div>
-    </section>
+    </section> -->
     <!-- Blog Section End -->
 
     <!-- Footer Section Begin -->
      <?php
-        include('incudes/footer.php');
+        include('includes/footer.php');
     ?>
     <!-- Footer Section End -->
 
