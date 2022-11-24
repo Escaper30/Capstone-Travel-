@@ -40,9 +40,9 @@
                         <h6>NewLetter</h6>
                         <div class="footer__newslatter">
                             <p>Be the first one to know about the new travel deals and packages.</p>
-                            <form action="#">
-                                <input type="text" placeholder="Your email">
-                                <button type="submit"><span class="icon_mail_alt"></span></button>
+                            <form action="newsletter.php" method="post">
+                                <input type="email" name="email" id="email" placeholder="Your email">
+                                <button type="submit" class="submit" name="submit" id="submit" value="submit"><span class="icon_mail_alt"></span></button>
                             </form>
                         </div>
                     </div>
