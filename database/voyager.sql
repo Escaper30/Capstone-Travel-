@@ -81,6 +81,22 @@ ALTER TABLE `contact`
 ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
+CREATE TABLE `checkout` (
+  `id` int(11) NOT NULL,
+  `fname` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
+`address` varchar(150) NOT NULL,
+`country` varchar(50) NOT NULL,
+`zip` varchar(50) NOT NULL,
+`phone` int(10) NOT NULL,
+  `email` varchar(50) NOT NULL
+  );
+  ALTER TABLE `checkout`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `checkout`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
 
 drop table if exists travelstories;
 CREATE TABLE `travelstories` (
@@ -124,7 +140,7 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-drop table if exists newsletter;
+drop table newsletter;
 CREATE TABLE `newsletter` (
   `id` int(11) NOT NULL,
   `email` varchar(250) NOT NULL
@@ -137,5 +153,5 @@ SELECT * FROM newsletter;
 select *from user;
 select * from admin;
 select * from contact;
-select * from products;
+select * from checkout;
 
