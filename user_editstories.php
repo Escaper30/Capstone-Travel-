@@ -34,7 +34,7 @@ if(!empty($_GET['id'])){
     $id = $_GET['id'];
 } else {
     $id = null;
-    $error = "<p> Error! product Id not recieved.";
+    $error = "<p> Error! id not recieved.";
     header("Location: user_viewstories.php");
 }
 
@@ -52,8 +52,6 @@ if($error == null){
         $traveldisc = $row['traveldisc'];
         $travelspec = $row['travelspec'];
         $postby = $row['postby'];
-        
-
         
     } // else-> inccorect entry in db
 } else {
@@ -111,44 +109,85 @@ if($error == null){
     ?>
     <!-- Header Section End -->
 
-
-    
+  
+        
+      
         <form action="user_updatestory.php" method="post">
-            <div class="form">
-                <center>
-                    <h3>
-                      Edit Your travel Stories!
-                    </h3><br>
 
-                </center>
-                <hr>
-                
-                <input  type="hidden" id="id" name="id" value="<?php echo $id; ?>">
-
-                <label for="travelimage"><b>Travel Image</b></label>
-                <input type="text" name="travelimage" id="travelimage" value="<?php echo $travelimage; ?>">
-
-                <label for="traveltitle"><b>Travel Title</b></label>
-                <input type="text" name="traveltitle" id="traveltitle" value="<?php echo $traveltitle; ?> ">
-
-                <label for="traveldisc"><b>Travel Discription</b></label>
-                <input type="text" name="traveldisc" id="traveldisc" value="<?php echo $traveldisc; ?> ">
-
-                <label for="travelspec"><b>Travel speciality</b></label>
-                <input type="text" name="travelspec" id="travelspec" value="<?php echo $travelspec; ?> "> 
-
-                <label for="postby"><b>Post By</b></label>
-                <input type="text" name="postby" id="postby" value="<?php echo $postby; ?> ">
-
-                <hr>
-                <center>
-                <button type="submit" class="submit" name="submit" id="submit" value="submit">Update Story</button>
-                </center>
-                
+        <section class="blog-hero spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-9 text-center">
+                    <div class="blog__hero__text">
+                        <h4>Enter Travel Title</h4>
+                        <h2><input type="text" name="traveltitle" id="traveltitle" value="<?php echo $traveltitle; ?> "></h2>
+                        <ul>
+                            <li><b><?php echo $postby; ?></b></li>
+                            <li>February 21, 2019</li>
+                            
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </form>
-    
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
 
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12">
+                    <div class="blog__details__pic">
+                        <img src="img/blog/1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                    <input  type="hidden" id="id" name="id" value="<?php echo $id; ?>">
+                    <input  type="hidden" id="postby" name="postby" value="<?php echo $postby; ?>">
+                    <input type="hidden" name="travelimage" id="travelimage" value="<?php echo $travelimage; ?>">
+                    <input type="hidden" name="travelimage" id="travelimage" value="testvalue">
+                        <div class="blog__details__text">
+                            <p><b>Enter Travel Discription</b></p>
+                    <p>
+                    <textarea name="traveldisc" id="traveldisc"  rows="10" cols="75"><?php echo $traveldisc; ?></textarea>
+                    </p>        
+                    </div>
+                        <div class="blog__details__quote">
+                            <i class="fa fa-quote-left"></i>
+                            <p><b>Enter Special Incident in your Travel</b></p>
+                            <p><textarea name="travelspec" id="travelspec"  rows="10" cols="65"><?php echo $travelspec; ?></textarea></p>
+                            
+                            <h6>~<?php echo $postby; ?> </h6>
+                        </div>
+                        
+                        <div class="blog__details__option">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog__details__author">
+                                        <div class="blog__details__author__pic">
+                                            <img src="img/blog/user.jpg" alt="">
+                                        </div>
+                                        <div class="blog__details__author__text">
+                                            <h5>Post BY : <i><?php echo $postby; ?></i></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                                    <div class="col-lg-12 text-center">
+                                        
+                                        <button type="submit" class="site-btn"  name="submit" id="submit" value="submit"> Update Travel Story</button>
+                                    </div>
+                                
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
 
 
 

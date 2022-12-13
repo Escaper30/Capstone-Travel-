@@ -6,6 +6,8 @@ $select = new Select();
 
 if(!empty($_SESSION["id"])){
   $user = $select->selectUserById($_SESSION["id"]);
+  $connection = new Connection();
+    $result = $connection->get_users($_SESSION["fname"]);
   include('includes/loggedin_header.php');
  
 }
@@ -27,8 +29,9 @@ else{
 //         if(isset($_POST["submit"])){
 //          $result = $travelstories->travelstories($_POST["travelimage"],$_POST["traveltitle"], $_POST["traveldisc"], $_POST["travelspec"],$_POST["postby"]);
 //         }
-$connection = new Connection();
-$result = $connection->get_users();
+// $connection = new Connection();
+// $result = $connection->get_users($_SESSION["fname"]);
+
 ?> 
 
 
@@ -83,39 +86,38 @@ $result = $connection->get_users();
     <center>
         <h2>View your all the Travel stories</h2>
     </center>
-    <table width="80%">
-            <thead>
-                <tr align="left">
-                    <th>ID</th>
-                    <th>Sr. No.</th>
-                    <th>travelimage</th>
-                    <th>traveltitle</th>
-                    <th>traveldisc</th>
-                    <th>travelspec</th>
-                    <th>postby</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    $sr_no = 0;
-                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                        $sr_no++;
-                        $str_to_print = "";
-                        $str_to_print = "<tr> <td>{$row['id']}</td>";
-                        $str_to_print .= "<td>$sr_no</td>";
-                        $str_to_print .= "<td> {$row['travelimage']}</td>";
-                        $str_to_print .= "<td> {$row['traveltitle']}</td>";
-                        $str_to_print .= "<td> {$row['traveldisc']}</td>";
-                        $str_to_print .= "<td> {$row['travelspec']}</td>";
-                        $str_to_print .= "<td> {$row['postby']}</td>";
-                        $str_to_print .= "<td> <a href='user_editstories.php?id={$row['id']}'>Edit</a> | <a href='user_deletestories.php?id={$row['id']}'>Delete</a> </td> </tr>";
 
-                        echo $str_to_print;
-                    }
-                ?>
-            </tbody>
-        </table>
+    <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <!-- <div class="col mb-5">
+                        <div class="card h-100"> -->
+
+                        <?php
+                            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
+                                $str_to_print = null;
+                                $str_to_print .= "<div class='col mb-5'><div class='card h-100'><img  class='card-img-top' src='./assets/{$row['travelimage']}' width='300' height='300'>";
+                                $str_to_print .= "<div class='card-body p-4'> <div class='text-center'>";
+                                $str_to_print .= "<h5 class='fw-bolder'> {$row['traveltitle']}</h5>";
+
+                                $str_to_print .= " <b>{$row['traveldisc']}</b><br>";
+                                $str_to_print .= " {$row['travelspec']} <br>";
+                                $str_to_print .= " <b>postby</b> : {$row['postby']}<br>";
+                                $str_to_print .= " <b>id</b> : {$row['id']}</div> </div>";
+
+                                $str_to_print .= "<div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
+                                <div class='text-center'><a class='btn btn-outline-success mt-auto' href='user_editstories.php?id={$row['id']}'>Edit Story</a><br><br><a class='btn btn-outline-danger  mt-auto' href='user_deletestories.php?id={$row['id']}'>Delete</a></div></div></div></div>";
+
+                                echo $str_to_print;
+                            }
+                        ?>
+
+                          
+                    
+                </div>
+            </div>
+
+    
     
        
     

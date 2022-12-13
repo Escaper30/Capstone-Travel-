@@ -27,6 +27,40 @@ else{
 //         if(isset($_POST["submit"])){
 //          $result = $travelstories->travelstories($_POST["travelimage"],$_POST["traveltitle"], $_POST["traveldisc"], $_POST["travelspec"],$_POST["postby"]);
 //         }
+
+
+// $error = null;
+//  $id = " ";
+// if(!empty($_GET['id'])){
+//     $id = $_GET['id'];
+// } else {
+//     $id = null;
+//     $error = "<p> Error! id not recieved.";
+//     header("Location: user_profile.php");
+// }
+
+// if($error == null){
+    
+//     $getprofile = new getprofile();
+    
+//     $result = $getprofile->getprofile($id);
+    
+//     if(mysqli_num_rows($result) == 1){
+//         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+//         $fname = $row['fname'];
+//         $lname = $row['lname'];
+//         $country = $row['country'];
+//         $phone = $row['phone'];
+//         $email = $row['email'];
+        
+//     } // else-> inccorect entry in db
+// } else {
+//     echo $error;
+// }
+
+
+
 ?> 
 
 
@@ -84,39 +118,42 @@ else{
         Welcome <b><?php echo $user["fname"]; ?>&nbsp;<?php echo $user["lname"]; ?></b>
         </h2>
     </center><br><hr>
-    <form action="user_updateprofile.php" method="post">
-            <div class="form">
-                <center>
-                    <h3>
-                      Edit Your travel Stories!
-                    </h3><br>
+    <form action="user_profile.php" method="post">
+        
 
-                </center>
-                <hr>
-                
-                <input  type="hidden" id="id" name="id" value="<?php echo $user["id"] ?>">
-
-                <label for="fname"><b>fname</b></label>
-                <input type="text" name="fname" id="fname" value="<?php echo $user["fname"]; ?>">
-
-                <label for="lname"><b>lname</b></label> 
-                <input type="text" name="lname" id="lname" value="<?php echo $user["lname"]; ?> ">
-
-                <label for="country"><b>country</b></label>
-                <input type="text" name="country" id="country" value="<?php echo $user["country"];?> ">
-
-                <label for="phone"><b>phone</b></label>
-                <input type="text" name="phone" id="phone" value="<?php echo $user["phone"]; ?> "> 
-
-                <label for="email"><b>email</b></label>
-                <input type="text" name="email" id="email" value="<?php echo $user["email"]; ?> ">
-
-                <hr>
-                <center>
-                <button type="submit" class="submit" name="submit" id="submit" value="submit">Update Profile</button>
-                </center>
-
-
+                <div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-6 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold"><?php echo $user["fname"]; ?> <?php echo $user["lname"]; ?></span><span class="text-black-50"><?php echo $user["email"]; ?></span><span> </span></div>
+        </div>
+        <div class="col-md-6 ">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value="<?php echo $user["fname"]; ?>"></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="<?php echo $user["lname"]; ?>" placeholder="surname"></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value="<?php echo $user["phone"]; ?>"></div>
+                    
+                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value="<?php echo $user["email"]; ?>"></div>
+                    
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value="<?php echo $user["country"]; ?>"></div>
+                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="<?php echo $user["country"]; ?>" placeholder="state"></div>
+                </div>
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button"type="submit" class="submit" name="submit" id="submit" value="submit">Save Profile</button></div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+</div>
+</div>
+</form>
    
 
     <!-- Footer Section Begin -->

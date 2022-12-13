@@ -82,7 +82,7 @@ $travelstories = new travelstories();
 
     
         <form action="user_portal.php" method="post">
-            <div class="form">
+            <!-- <div class="form">
                 <center>
                     <h3>
                       Describe your travel stories with the Others
@@ -103,15 +103,93 @@ $travelstories = new travelstories();
                 <input type="text" name="travelspec" id="travelspec" placeholder="Travel speciality"> 
 
                 <label for="postby"><b>Post By</b></label>
-                <input type="text" name="postby" id="postby" placeholder="Post By">
+                <input type="text" name="postby" id="postby" value="<?php echo $user["fname"]; ?>"  placeholder="Post By" >
 
                 <hr>
                 <center>
                 <button type="submit" class="submit" name="submit" id="submit" value="submit">Add Product</button>
                 </center>
                 
+            </div> -->
+
+
+            
+        <section class="blog-hero spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-9 text-center">
+                    <div class="blog__hero__text">
+                        <h4>Enter Travel Title</h4>
+                        <h2><input type="text" name="traveltitle" id="traveltitle" value=" "></h2>
+                        <ul>
+                            <li><h4><b><?php echo $user["fname"]; ?></b></h4></li>
+                            <li>February 21, 2019</li>
+                            
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+    <!-- Blog Details Hero End -->
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-12">
+                    <div class="blog__details__pic">
+                        <img src="img/blog/1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="blog__details__content">
+                    <input  type="hidden" id="id" name="id" value="<?php echo $id; ?>">
+                    <input  type="hidden" id="postby" name="postby" value="<?php echo $user["fname"];  ?>">
+                    <input type="hidden" name="travelimage" id="travelimage" value="">
+                        <div class="blog__details__text">
+                            <p><b>Enter Travel Discription</b></p>
+                    <p>
+                    <textarea name="traveldisc" id="traveldisc"  rows="10" cols="75" placeholder="Enter your travel setory"></textarea>
+                    </p>        
+                    </div>
+                        <div class="blog__details__quote">
+                            <i class="fa fa-quote-left"></i>
+                            <p><b>Enter Special Incident in your Travel</b></p>
+                            <p><textarea name="travelspec" id="travelspec"  rows="10" cols="65"  placeholder="Something Special"></textarea></p>
+                            
+                            <h6>~<?php echo $user["fname"]; ?> </h6>
+                        </div>
+                        
+                        <div class="blog__details__option">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <div class="blog__details__author">
+                                        <div class="blog__details__author__pic">
+                                            <img src="img/blog/user.jpg" alt="">
+                                        </div>
+                                        <div class="blog__details__author__text">
+                                            <h5>Post BY : <i><?php echo $user["fname"]; ?></i></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                       
+                                    <div class="col-lg-12 text-center">
+                                        
+                                        <button type="submit" class="site-btn"  name="submit" id="submit" value="submit">Add Travel Story</button>
+                                    </div>
+                                
+                </div>
+            </div>
+        </div>
+    </section>
         </form>
+
+
+        
     
 
 
