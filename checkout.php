@@ -111,7 +111,7 @@ if(isset($_POST["submit"])){
 <section class="checkout spad">
         <div class="container">
             <div class="checkout__form">
-            <form action="" method="post" autocomplete="off" id="checkout">
+            <form action="invoicepdf.php" method="post" autocomplete="off" id="checkout">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click
@@ -238,8 +238,8 @@ if(isset($_POST["submit"])){
                                 </ul>
                           
     
-                                <div class="fbtn">
-					<a href="invoicepdf.php"><input type="submit" id="submit" class="primary-btn" name="submit"
+                    <div class="fbtn">
+					    <a href="invoicepdf.php"><input type="submit" id="submit" class="primary-btn" name="submit"
 						value="Checkout"></a>
 					</div>
                             </div>
