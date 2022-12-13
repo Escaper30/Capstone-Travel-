@@ -25,7 +25,7 @@ else{
 
 $travelstories = new travelstories();
         if(isset($_POST["submit"])){
-         $result = $travelstories->travelstories($_POST["travelimage"],$_POST["traveltitle"], $_POST["traveldisc"], $_POST["travelspec"],$_POST["postby"]);
+         $result = $travelstories->travelstories($_POST["image"],$_POST["traveltitle"], $_POST["traveldisc"], $_POST["travelspec"],$_POST["postby"]);
         }
 ?> 
 
@@ -81,7 +81,7 @@ $travelstories = new travelstories();
 
 
     
-        <form action="user_portal.php" method="post">
+        <form action="user_portal.php" method="post" enctype="multipart/form-data">
             <!-- <div class="form">
                 <center>
                     <h3>
@@ -146,9 +146,21 @@ $travelstories = new travelstories();
                     <div class="blog__details__content">
                     <input  type="hidden" id="id" name="id" value="<?php echo $id; ?>">
                     <input  type="hidden" id="postby" name="postby" value="<?php echo $user["fname"];  ?>">
-                    <input type="hidden" name="travelimage" id="travelimage" value="">
-                        <div class="blog__details__text">
-                            <p><b>Enter Travel Discription</b></p>
+                    <input type="hidden" class="form-control" name="image" id="image" value="">
+
+                    <h5><b>Enter Travel Discription</b></h5>
+                    <div class="custom-file">
+                   
+                    <input type="file"  class="custom-file-input" id="inputGroupFile03" name="image" id="image" value="">
+                    <label class="custom-file-label" for="inputGroupFile03">Choose Travel Image</label>
+                    </div>
+                        <div class="blog__details__text"><br>
+
+
+
+                    <p><b>Enter Travel Discription</b></p>
+
+
                     <p>
                     <textarea name="traveldisc" id="traveldisc"  rows="10" cols="75" placeholder="Enter your travel setory"></textarea>
                     </p>        

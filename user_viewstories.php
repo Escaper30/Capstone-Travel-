@@ -69,9 +69,9 @@ else{
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
     <?php
         include('includes/modalcontent.php');
@@ -96,10 +96,13 @@ else{
                         <?php
                             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
                                 $str_to_print = null;
-                                $str_to_print .= "<div class='col mb-5'><div class='card h-100'><img  class='card-img-top' src='./assets/{$row['travelimage']}' width='300' height='300'>";
+                                $str_to_print .= "<div class='col mb-5'><div class='card h-100'>";
+                                $str_to_print .= "<img class='card-img-top' src='data:image/jpg;charset=utf8;base64,";
+                                $encodedValue = base64_encode($row['image']);
+                                $str_to_print .=  "$encodedValue '/>";
                                 $str_to_print .= "<div class='card-body p-4'> <div class='text-center'>";
                                 $str_to_print .= "<h5 class='fw-bolder'> {$row['traveltitle']}</h5>";
-
+                                
                                 $str_to_print .= " <b>{$row['traveldisc']}</b><br>";
                                 $str_to_print .= " {$row['travelspec']} <br>";
                                 $str_to_print .= " <b>postby</b> : {$row['postby']}<br>";
@@ -112,7 +115,11 @@ else{
                             }
                         ?>
 
-                          
+                        
+
+
+
+          
                     
                 </div>
             </div>

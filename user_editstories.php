@@ -139,18 +139,24 @@ if($error == null){
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-12">
                     <div class="blog__details__pic">
-                        <img src="img/blog/1.jpg" alt="">
+                    <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?> " width='500' height='600'/>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="blog__details__content">
-                        
                     <input  type="hidden" id="id" name="id" value="<?php echo $id; ?>">
                     <input  type="hidden" id="postby" name="postby" value="<?php echo $postby; ?>">
-                    <input type="hidden" name="travelimage" id="travelimage" value="<?php echo $travelimage; ?>">
-                    <input type="hidden" name="travelimage" id="travelimage" value="testvalue">
+                    <!-- <input type="hidden" name="image" id="travelimage" value=""> -->
+
+
+                    <h5><b>Choose New Image</b></h5><br>
+                    <div class="custom-file">
+                   
+                    <input type="file"  class="custom-file-input" id="inputGroupFile03" name="image" id="image" value="">
+                    <label class="custom-file-label" for="inputGroupFile03">Choose Travel Image</label>
+                    </div>
                         <div class="blog__details__text">
-                            <p><b>Enter Travel Discription</b></p>
+                            <br><p><b>Enter Travel Discription</b></p>
                     <p>
                     <textarea name="traveldisc" id="traveldisc"  rows="10" cols="75"><?php echo $traveldisc; ?></textarea>
                     </p>        

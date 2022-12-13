@@ -9,10 +9,10 @@
         $errors[] = "<p> Error!!!! User ID is required!!</p>";
     }
 
-    if(!empty($_POST['travelimage'])){
-        $travelimage = $_POST['travelimage'];  
+    if(!empty($_POST['image'])){
+        $image = $_POST['image'];  
     } else {
-        $travelimage = null;
+        $image = null;
         $errors[] = "<p> travel image is required!!</p>";
     }
 
@@ -45,7 +45,7 @@
         
         $updatestories = new updatestories();
         
-        $result = $updatestories->updatestories($id, $travelimage, $traveltitle, $traveldisc, $travelspec, $postby);
+        $result = $updatestories->updatestories($id, $image, $traveltitle, $traveldisc, $travelspec, $postby);
         
         if($result){
             header("Location: user_viewstories.php");

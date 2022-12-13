@@ -129,23 +129,24 @@ else{
         <div class="col-md-6 ">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Settings</h4>
+                    <h4 class="text-right"><b>VOYAGER Profile</b></h4>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value="<?php echo $user["fname"]; ?>"></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="<?php echo $user["lname"]; ?>" placeholder="surname"></div>
+                    <div class="col-md-6"><label class="labels">Name</label><h4><b><?php echo $user["fname"]; ?></b></h4></div>
+                    <div class="col-md-6"><label class="labels">Surname</label><h4><b><?php echo $user["lname"]; ?></b></h4></div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value="<?php echo $user["phone"]; ?>"></div>
+                    <div class="col-md-12"><label class="labels">Mobile Number</label><h4><b><?php echo $user["phone"]; ?></b></h4></div>
                     
-                    <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value="<?php echo $user["email"]; ?>"></div>
+                    <div class="col-md-12"><label class="labels">Email ID</label><h4><b><?php echo $user["email"]; ?></b></h4></div>
                     
                 </div>
+                
                 <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value="<?php echo $user["country"]; ?>"></div>
-                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="<?php echo $user["country"]; ?>" placeholder="state"></div>
+                    <div class="col-md-6"><label class="labels">Country</label><h4><b><?php echo $user["country"]; ?></b></h4></div>
+                    <div class="col-md-6"><label class="labels">State/Region</label><h4><b><?php echo $user["country"]; ?></b></h4></div>
                 </div>
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button"type="submit" class="submit" name="submit" id="submit" value="submit">Save Profile</button></div>
+                <!-- <div class="mt-5 text-center"><button class="btn btn-primary profile-button"type="submit" class="submit" name="submit" id="submit" value="submit">Save Profile</button></div> -->
             </div>
         </div>
        
