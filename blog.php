@@ -114,14 +114,19 @@ $result = $connection->get_stories();
                             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
                                 $str_to_print = null;
                                 $str_to_print .= "<div class='col-lg-4 col-md-6 col-sm-6'>
-                                                <div class='blog__item'><div class='blog__item__pic set-bg' data-setbg='img/blog/blog-5.jpg'></div>";
+                                                <div class='blog__item'>";
+                                $str_to_print .= "<div class='col mb-5'><div class='card h-80'> <img class='card-img-top' src='data:image/jpg;charset=utf8;base64,";
+                                $encodedValue = base64_encode($row['image']);
+                                $str_to_print .=  "$encodedValue '/>";
                                 $str_to_print .= "<div class='blog__item__text'>";
-                                $str_to_print .= "<span><img src='img/icon/calendar.png'> 16 February 2020</span>";
+                                $str_to_print .= "<span><img src='img/icon/calendar.png'>";
+                                $str_to_print .=  date('Y/m/d') ; 
+                                $str_to_print .= "</span>";
                                 $str_to_print .= "<h4> {$row['traveltitle']}</h4>";
                                 $str_to_print .= "<img src='img/blog/user.jpg'  width='20' height='20'> <b> {$row['postby']}<br></b>";
                                 // $str_to_print .= " <b>{$row['traveldisc']}</b><br>";
                                 $str_to_print .= " <a href='blog-details.php?id={$row['id']}''>Read More</a>
-                                </div>";
+                                </div></div></div>";
                                 // 
                                 $str_to_print .= "  </div></div>";
 
