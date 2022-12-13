@@ -47,7 +47,7 @@ if($error == null){
     if(mysqli_num_rows($result) == 1){
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-        $travelimage = $row['travelimage'];
+        $image = $row['image'];
         $traveltitle = $row['traveltitle'];
         $traveldisc = $row['traveldisc'];
         $travelspec = $row['travelspec'];
@@ -144,6 +144,7 @@ if($error == null){
                 </div>
                 <div class="col-lg-8">
                     <div class="blog__details__content">
+                        
                     <input  type="hidden" id="id" name="id" value="<?php echo $id; ?>">
                     <input  type="hidden" id="postby" name="postby" value="<?php echo $postby; ?>">
                     <input type="hidden" name="travelimage" id="travelimage" value="<?php echo $travelimage; ?>">
