@@ -42,19 +42,11 @@
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./user_profile.php">Profile</a></li>
-                            <li><a href="./user_portal.php">Add</a></li>
-                            <!-- <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./about.html">About Us</a></li>
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li> -->
-                            <li><a href="./user_viewstories.php">View </a></li>
-                            <li ><a href="./contact.php">Update</a></li>
+                            <li><a href="./user_profile.php">Profile</a></li>
+                            <li><a href="./user_portal.php">Add Story</a></li>
+                            
+                            <li><a href="./user_viewstories.php">View Story </a></li>
+                           
                         </ul>
                     </nav>
                 </div>
