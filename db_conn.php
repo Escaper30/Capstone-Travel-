@@ -34,6 +34,10 @@ class Connection{
     $result = @mysqli_query($this->conn,$query);
     return $result;
   }
+
+
+
+
   
 
 //   function delete_stories($id) {
