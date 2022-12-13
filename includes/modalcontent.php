@@ -14,8 +14,8 @@
     <p>Here you can Add, Delete, Update Travel Stories, that further helps to other travelers to make<br>
     there journey memorable</p>
     <br>
-    <a href="user_portal.php" class="primary-btn"><?php echo $user["fname"];  ?>'s Portal<span class="arrow_right"></span></a>
-    
+    <a href="user_profile.php" class="primary-btn"><?php echo $user["fname"];  ?>'s Portal<span class="arrow_right"></span></a>
+   
   </div>
   <div class="modal-footer">
     <h3></h3>
