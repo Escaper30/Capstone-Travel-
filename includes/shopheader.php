@@ -82,7 +82,7 @@
                         <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
                         <a href="#"><img src="img/icon/heart.png" alt=""></a>
                         <!-- <a href="login.php" class="primary-btn">AddtoCart <span class="arrow_right"></span></a> -->
-                        <a href="view_cart.php" class="primary-btn cart"   style="color:white;">cart - <?php echo count($_SESSION['cart']); ?> </a>
+                        <a href="view_cart.php"  style="color:black; font-size:24px;"> <i class="fa fa-shopping-cart"></i> - <?php echo count($_SESSION['cart']); ?> </a>
                         <!-- <div class="price">$0.00</div> -->
                     </div>
                 </div>
