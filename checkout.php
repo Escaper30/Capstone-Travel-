@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-  
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Voyager | Checkout</title>
@@ -37,7 +38,7 @@
                 <a href="#">Sign in</a>
                 <a href="#">FAQs</a>
             </div>
-            <div class="offcanvas_top_hover">
+            <div class="offcanvas__top__hover">
                 <span>Usd <i class="arrow_carrot-down"></i></span>
                 <ul>
                     <li>USD</li>
@@ -46,7 +47,7 @@
                 </ul>
             </div>
         </div>
-        <div class="offcanvas_nav_option">
+        <div class="offcanvas__nav__option">
             <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
             <a href="#"><img src="img/icon/heart.png" alt=""></a>
             <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
@@ -84,8 +85,6 @@ if(isset($_POST["submit"])){
   $result = $checkout->checkout($_POST["fname"], $_POST["lname"], $_POST["address"], $_POST["country"], $_POST["zip"], $_POST["phone"], $_POST["email"],);
 }
 ?> 
-
-
     <!-- Header Section End -->
 
     <!-- Breadcrumb Section Begin -->
@@ -111,7 +110,7 @@ if(isset($_POST["submit"])){
 <section class="checkout spad">
         <div class="container">
             <div class="checkout__form">
-            <form action="invoicepdf.php" method="post" autocomplete="off" id="checkout">
+            <form action="" method="post" autocomplete="off" id="checkout">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click
@@ -134,7 +133,7 @@ if(isset($_POST["submit"])){
                             
                             <div class="checkout__input">
                                 <p>Address<span>*</span></p>
-                                <input type="text" placeholder="Street Address" class="checkout_input_add" name="address" required>
+                                <input type="text" placeholder="Street Address" class="checkout__input__add" name="address" required>
                                 
                             </div>
                             <div class="checkout__input">
@@ -160,7 +159,7 @@ if(isset($_POST["submit"])){
                                     </div>
                                 </div>
                             </div>
-                            <!-- <button type="submit" name="submit" class="primary-btn">Submit<span class="arrow_right"></span></button>  -->
+                            <button type="submit" name="submit" class="primary-btn">Submit<span class="arrow_right"></span></button> 
                             <!-- <div class="checkout_input_checkbox">
                                 <label for="acc">
                                     Create an account?
@@ -189,59 +188,42 @@ if(isset($_POST["submit"])){
                         </div> 
                         <div class="col-lg-4 col-md-6">
                             <div class="checkout__order">
-                                <h4 class="order__title">Order Summary</h4>
-                               
+                                <h4 class="order__title">Your order</h4>
+                                <div class="checkout_order_products">Product <span>Total</span></div>
                                 <ul class="checkout_total_products">
-                                    
+                                    <li>Petra x 3<span>$ 300.0</span></li>
                                     <!-- <li>German Travel Package <span>$ 570.0</span></li>
                                     <li>autumn Package <span>$ 470.0</span></li>
                                     <li>mini Package <span>$ 210.0</span></li> -->
                                 </ul>
                                 <ul class="checkout_total_all">
                                     <!-- <li>Subtotal <span>$750.99</span></li> -->
-                                    <?php
-						//initialize total
-						$total = 0;
-						if(!empty($_SESSION['cart'])){
-						//connection
-						$conn = new mysqli('localhost', 'root', '', 'voyager');
-						//create array of initail qty which is 1
- 						$index = 0;
- 						if(!isset($_SESSION['qty_array'])){
- 							$_SESSION['qty_array'] = array_fill(0, count($_SESSION['cart']), 1);
- 						}
-						$sql = "SELECT * FROM products WHERE pr_id IN (".implode(',',$_SESSION['cart']).")";
-						$query = $conn->query($sql);
-							while($row = $query->fetch_assoc()){
-								?>
-								<tr>
-								
-                                <strong> <li><?php echo $row['pr_title']; ?></li>
-                                <li> ( <?php echo $_SESSION['qty_array'][$index];?> x persons)</li></strong>
-                                Sub-Total = $ <?php echo number_format($_SESSION['qty_array'][$index]*$row['pr_cost'], 2); ?>
-									<?php $total += $_SESSION['qty_array'][$index]*$row['pr_cost']; ?> 
-								</tr>
-								<?php
-								$index ++;
-							}
-						}
-						else{
-							?>
-							<tr>
-								<td colspan="4" class="text-center">No Item in Cart</td>
-							</tr>
-							<?php
-						}
-
-					?>
-                 <li><strong>Total = $<?php echo number_format($total, 2); ?></strong></li>
+                                    <li>Total <span>$900.00</span></li>
                                 </ul>
-                          
-    
-                    <div class="fbtn">
-					    <a href="invoicepdf.php"><input type="submit" id="submit" class="primary-btn" name="submit"
-						value="Checkout"></a>
-					</div>
+                                <div class="checkout_input_checkbox">
+                                    <label for="acc-or">
+                                        Create an account?
+                                        <input type="checkbox" id="acc-or">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.</p>
+                                <div class="checkout_input_checkbox">
+                                    <label for="payment">
+                                        Check Payment
+                                        <input type="checkbox" id="payment">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="checkout_input_checkbox">
+                                    <label for="paypal">
+                                        Paypal
+                                        <input type="checkbox" id="paypal">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="site-btn">PLACE ORDER</button>
                             </div>
                         </div>
                     </div>
