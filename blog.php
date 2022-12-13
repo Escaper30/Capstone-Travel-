@@ -17,7 +17,7 @@ else{
 }
 
 $connection = new Connection();
-$result = $connection->get_users();
+$result = $connection->get_stories();
 
 ?> 
 
@@ -74,17 +74,9 @@ $result = $connection->get_users();
     <!-- Header Section End -->
 
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-blog set-bg" data-setbg="img/breadcrumb-bg.jpeg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Travel Stories</h2>
-                </div>
-            </div>
-        </div>
-    </section>
+   
      <!-- Breadcrumb Section Begin -->
-     <br><br>
+
      <section class="breadcrumb-option">
         <div class="container">
             <div class="row">
@@ -93,8 +85,7 @@ $result = $connection->get_users();
                         <h4>Travel Stories</h4>
                         <div class="breadcrumb__links">
                             <a href="./index.html">Home</a>
-                            <a href="./shop.html">Shop</a>
-                            <span>Check Out</span>
+                            <span>Travel Stories</span>
                         </div>
                     </div>
                 </div>
@@ -105,35 +96,43 @@ $result = $connection->get_users();
 
     <!-- Breadcrumb Section End -->
 
+    <section class="latest spad">
+            <div class="container">
 
-    <?php
-                    $sr_no = 0;
-                    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-                        ?>
-
-         <section class="blog spad">
-        <div class="container">
-           
-                
-                
-                    <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpeg"></div>
-                        <div class="blog__item__text">
-                            <span><img src="img/icon/calendar.png" alt=""> 21 February 2020</span>
-                            <h5><?php echo $row['traveltitle']; ?></h5>
-                            <a href="blog-details.php">Read More</a>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Travel Stories</span>
+                        <h2>Travel with Love</h2>
                     </div>
                 </div>
-                <?php
-                        // echo $str_to_print;
+            </div>
+                <div class="row justify-content-center">
 
-                    }
-                ?>
-                
-        </div>
-    </section>
+
+                        <?php
+                            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
+                                $str_to_print = null;
+                                $str_to_print .= "<div class='col-lg-4 col-md-6 col-sm-6'>
+                                                <div class='blog__item'><div class='blog__item__pic set-bg' data-setbg='img/blog/blog-5.jpg'></div>";
+                                $str_to_print .= "<div class='blog__item__text'>";
+                                $str_to_print .= "<span><img src='img/icon/calendar.png'> 16 February 2020</span>";
+                                $str_to_print .= "<h4> {$row['traveltitle']}</h4>";
+                                $str_to_print .= "<img src='img/blog/user.jpg'  width='20' height='20'> <b> {$row['postby']}<br></b>";
+                                // $str_to_print .= " <b>{$row['traveldisc']}</b><br>";
+                                $str_to_print .= " <a href='blog-details.php?id={$row['id']}''>Read More</a>
+                                </div>";
+                                // 
+                                $str_to_print .= "  </div></div>";
+
+                               
+                                echo $str_to_print;
+                            }
+                        ?>
+
+
+  
+     </section>
 
     <!-- Blog Section Begin -->
     <!-- <section class="blog spad">
