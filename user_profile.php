@@ -17,52 +17,8 @@ else{
   include('includes/top_header.php');
 }
 
-// $contact = new contact();
-
-// if(isset($_POST["submit"])){
-//   $result = $contact->contact($_POST["fname"],$_POST["lname"], $_POST["email"], $_POST["message"],);
-// }
-
-// $travelstories = new travelstories();
-//         if(isset($_POST["submit"])){
-//          $result = $travelstories->travelstories($_POST["travelimage"],$_POST["traveltitle"], $_POST["traveldisc"], $_POST["travelspec"],$_POST["postby"]);
-//         }
-
-
-// $error = null;
-//  $id = " ";
-// if(!empty($_GET['id'])){
-//     $id = $_GET['id'];
-// } else {
-//     $id = null;
-//     $error = "<p> Error! id not recieved.";
-//     header("Location: user_profile.php");
-// }
-
-// if($error == null){
-    
-//     $getprofile = new getprofile();
-    
-//     $result = $getprofile->getprofile($id);
-    
-//     if(mysqli_num_rows($result) == 1){
-//         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
-//         $fname = $row['fname'];
-//         $lname = $row['lname'];
-//         $country = $row['country'];
-//         $phone = $row['phone'];
-//         $email = $row['email'];
-        
-//     } // else-> inccorect entry in db
-// } else {
-//     echo $error;
-// }
-
-
 
 ?> 
-
 
 
 
@@ -98,9 +54,9 @@ else{
 
 <body>
     <!-- Page Preloder -->
-    <div id="preloder">
+    <!-- <div id="preloder">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
     <?php
         include('includes/modalcontent.php');
@@ -146,6 +102,8 @@ else{
                     <div class="col-md-6"><label class="labels">Country</label><h4><b><?php echo $user["country"]; ?></b></h4></div>
                     <div class="col-md-6"><label class="labels">State/Region</label><h4><b><?php echo $user["country"]; ?></b></h4></div>
                 </div>
+
+               
                 <!-- <div class="mt-5 text-center"><button class="btn btn-primary profile-button"type="submit" class="submit" name="submit" id="submit" value="submit">Save Profile</button></div> -->
             </div>
         </div>
