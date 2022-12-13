@@ -23,7 +23,7 @@ class Connection{
 
   function get_stories() {
     
-    $query = 'SELECT * FROM travelstories';
+    $query = 'SELECT * FROM travelstories ORDER BY id DESC; ';
     $result = @mysqli_query($this->conn,$query);
     return $result;
   }

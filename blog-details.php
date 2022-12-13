@@ -35,7 +35,7 @@ if($error == null){
     if(mysqli_num_rows($result) == 1){
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-        $travelimage = $row['travelimage'];
+        $travelimage = $row['image'];
         $traveltitle = $row['traveltitle'];
         $traveldisc = $row['traveldisc'];
         $travelspec = $row['travelspec'];
@@ -57,7 +57,7 @@ if($error == null){
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eiffel Tower | Voyager</title>
+    <title>Voyager</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -109,7 +109,7 @@ if($error == null){
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-12">
                     <div class="blog__details__pic">
-                        <img src="img/blog/1.jpg" alt="">
+                         <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?> " width='500' height='600'/>
                     </div>
                 </div>
                 <div class="col-lg-8">
