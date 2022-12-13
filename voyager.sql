@@ -101,7 +101,7 @@ COMMIT;
 drop table if exists travelstories;
 CREATE TABLE `travelstories` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `travelimage` varchar(255) NOT NULL,
+  `image` longblob NOT NULL,
   `traveltitle` varchar(255) NOT NULL,
   `traveldisc` varchar(255) NOT NULL,
   `travelspec` varchar(255) NOT NULL,
@@ -154,4 +154,5 @@ select *from user;
 select * from admin;
 select * from contact;
 select * from checkout;
+select * from products;
 
