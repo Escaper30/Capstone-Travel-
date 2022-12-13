@@ -13,6 +13,7 @@ if(isset($_POST["submit"])){
   if($result == 1){
     $_SESSION["login"] = true;
     $_SESSION["id"] = $login->idUser();
+    $_SESSION["fname"] = $login->fnameUser();
     header("Location: index.php");
   }
   elseif($result == 10){
