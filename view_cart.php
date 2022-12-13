@@ -119,10 +119,10 @@ else{
 					</tr>
 				</tbody>
 			</table>
-			<a href="index.php" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
-			<button type="submit" class="btn btn-success" name="save">Save Changes</button>
-			<a href="clear_cart.php" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Clear Cart</a>
-			<a href="checkout.php" class="btn btn-success"><span class="glyphicon glyphicon-check"></span> Checkout</a>
+			<a href="index.php" class="btn btn-dark" style="font-size:12px;><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
+			<button type="submit" class="btn btn-success" style="font-size:12px;" name="save">Save Changes</button>
+			<a href="clear_cart.php" class="btn btn-danger" style="font-size:12px;><span class="glyphicon glyphicon-trash"></span> Clear Cart</a>
+			<br><br><a href="checkout.php" class="primary-btn"><span class="glyphicon glyphicon-check"></span> Checkout</a>
 			</form>
 		</div>
 	</div>
