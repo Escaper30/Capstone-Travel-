@@ -14,8 +14,16 @@ class Connection{
     $this->conn = mysqli_connect($this->host, $this->user, $this->password, $this->db_name);
   }
 
-  function get_users() {
-    $query = 'SELECT * FROM travelstories;';
+  function get_users($fname) {
+    
+    $query = 'SELECT * FROM travelstories where postby = "'.$fname.'"';
+    $result = @mysqli_query($this->conn,$query);
+    return $result;
+  }
+
+  function get_stories() {
+    
+    $query = 'SELECT * FROM travelstories';
     $result = @mysqli_query($this->conn,$query);
     return $result;
   }
@@ -63,6 +71,7 @@ class Register extends Connection{
 
 class Login extends Connection{
   public $id;
+  public $fname;
   public function login($email, $password){
     $result = mysqli_query($this->conn, "SELECT * FROM user WHERE fname = '$fname' OR email = '$email'");
     $row = mysqli_fetch_assoc($result);
@@ -70,6 +79,7 @@ class Login extends Connection{
     if(mysqli_num_rows($result) > 0){
       if($password == $row["password"]){
         $this->id = $row["id"];
+        $this->fname = $row["fname"];
         return 1;
         // Login successful
       }
@@ -86,6 +96,9 @@ class Login extends Connection{
 
   public function idUser(){
     return $this->id;
+  }
+  public function fnameUser(){
+    return $this->fname;
   }
 }
 
@@ -178,16 +191,40 @@ class updatestories extends Connection{
 }
 }
 
-class updateprofile extends Connection{
-  public function updateprofile($id, $fname, $lname, $country, $phone, $email){
-     $sql= "UPDATE user SET fname = '$fname', lname = '$lname', country = '$country', phone = '$phone', email = '$email' WHERE  id = '$id';";
-    echo $sql;
-     $query = mysqli_query($this->conn, $sql);
+// class getprofile extends Connection{
+//   public function getprofile($id){
+//   $query =  mysqli_query($this->conn, "SELECT * FROM user WHERE id = $id ;");
+//   return $query;
+// }
+// }
 
-  // $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE product_id = $product_id ;");
-  return $query;
-}
-}
+// class updateprofile extends Connection{
+//   public function updateprofile($id, $fname, $lname, $country, $phone, $email){
+//      $sql= "UPDATE user SET fname = '$fname', lname = '$lname', country = '$country', phone = '$phone', email = '$email' WHERE  id = '$id';";
+//     echo $sql;
+//      $query = mysqli_query($this->conn, $sql);
+
+//   // $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE product_id = $product_id ;");
+//   return $query;
+// }
+// }
+
+// class updateprofile extends Connection{
+//   public function updateprofile($fname, $lname, $country, $phone, $email){
+//     $duplicate = mysqli_query($this->conn, "SELECT FROM user WHERE email = '$email'");
+//     if(mysqli_num_rows($duplicate) > 0){
+//       return 10;
+     
+//     }
+//     else{
+     
+//         $query = "UPDATE user SET fname = '$fname', lname = '$lname', country = '$country', phone = '$phone', email = '$email'";
+//         mysqli_query($this->conn, $query);
+//         return 1;
+    
+//     }
+//   }
+// }
 
 
 class newsletter extends Connection{
@@ -207,22 +244,22 @@ class newsletter extends Connection{
   }
 }
 
-class checkout extends Connection{
-  public function checkout($fname, $lname, $address, $country, $zip, $phone, $email,){
-    $duplicate = mysqli_query($this->conn, "SELECT * FROM checkout WHERE fname = '$fname'");
-    if(mysqli_num_rows($duplicate) > 0){
-      return 10;
+// class checkout extends Connection{
+//   public function checkout($fname, $lname, $address, $country, $zip, $phone, $email,){
+//     $duplicate = mysqli_query($this->conn, "SELECT * FROM checkout WHERE fname = '$fname'");
+//     if(mysqli_num_rows($duplicate) > 0){
+//       return 10;
      
-    }
-    else{
+//     }
+//     else{
      
-        $query = "INSERT INTO checkout VALUES('', '$fname', '$lname', '$address', '$country', '$zip', '$phone', '$email')";
-        mysqli_query($this->conn, $query);
-        return 1;
+//         $query = "INSERT INTO checkout VALUES('', '$fname', '$lname', '$address', '$country', '$zip', '$phone', '$email')";
+//         mysqli_query($this->conn, $query);
+//         return 1;
     
-    }
-  }
-}
+//     }
+//   }
+// }
 // class get_users extends Connection{
 //   public function get_users(){
 //     $result = mysqli_query($this->conn, "SELECT * FROM travelstories;");
