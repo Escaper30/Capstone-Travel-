@@ -143,6 +143,26 @@ class checkout extends Connection{
 }
 
 
+// class travelstories extends Connection{
+//   public function travelstories($travelimage , $traveltitle, $traveldisc, $travelspec, $postby){
+//     $duplicate = mysqli_query($this->conn, "SELECT * FROM travelstories WHERE traveltitle = '$traveltitle'");
+//     if(mysqli_num_rows($duplicate) > 0){
+//       return 10;
+     
+//     }
+//     else{
+     
+//         $query = "INSERT INTO travelstories VALUES('', '$image','$traveltitle','$traveldisc', '$travelspec','$postby')";
+//         mysqli_query($this->conn, $query);
+//         return 1;
+    
+//     }
+//   }
+// }
+
+
+
+
 class travelstories extends Connection{
   public function travelstories($travelimage , $traveltitle, $traveldisc, $travelspec, $postby){
     $duplicate = mysqli_query($this->conn, "SELECT * FROM travelstories WHERE traveltitle = '$traveltitle'");
@@ -151,11 +171,27 @@ class travelstories extends Connection{
      
     }
     else{
+     $status = $statusMsg = ''; 
+      if(isset($_POST["submit"])){ 
+          $status = 'error'; 
+          if(!empty($_FILES["image"]["name"])) { 
+              // Get file info 
+              $fileName = basename($_FILES["image"]["name"]); 
+              $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+               
+              // Allow certain file formats 
+              $allowTypes = array('jpg','png','jpeg','gif'); 
+              if(in_array($fileType, $allowTypes)){ 
+                  $image = $_FILES['image']['tmp_name']; 
+                  $imgContent = addslashes(file_get_contents($image)); 
      
-        $query = "INSERT INTO travelstories VALUES('', '$travelimage','$traveltitle','$traveldisc', '$travelspec','$postby')";
+        $query = "INSERT INTO travelstories VALUES('', '$imgContent','$traveltitle','$traveldisc', '$travelspec','$postby')";
         mysqli_query($this->conn, $query);
         return 1;
-    
+              
+              }
+            }
+          }
     }
   }
 }
@@ -181,13 +217,32 @@ class deletestories extends Connection{
 
 
 class updatestories extends Connection{
-  public function updatestories($id, $travelimage, $traveltitle, $traveldisc, $travelspec, $postby){
-     $sql= "UPDATE travelstories SET travelimage = '$travelimage', traveltitle = '$traveltitle', traveldisc = '$traveldisc', travelspec = '$travelspec', postby = '$postby' WHERE  id = '$id';";
+  public function updatestories($id, $image, $traveltitle, $traveldisc, $travelspec, $postby){
+
+    // $status = $statusMsg = ''; 
+    // if(isset($_POST["submit"])){ 
+    //     $status = 'error'; 
+    //     if(!empty($_FILES["image"]["name"])) { 
+    //         // Get file info 
+    //         $fileName = basename($_FILES["image"]["name"]); 
+    //         $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+             
+    //         // Allow certain file formats 
+    //         $allowTypes = array('jpg','png','jpeg','gif'); 
+    //         if(in_array($fileType, $allowTypes)){ 
+    //             $image = $_FILES['image']['tmp_name']; 
+    //             $imgContent = addslashes(file_get_contents($image));
+                
+     $sql= "UPDATE travelstories SET traveltitle = '$traveltitle', traveldisc = '$traveldisc', travelspec = '$travelspec', postby = '$postby' WHERE  id = '$id';";
     echo $sql;
      $query = mysqli_query($this->conn, $sql);
 
   // $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE product_id = $product_id ;");
   return $query;
+        //     }
+        //   }
+        // }
+          
 }
 }
 
