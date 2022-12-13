@@ -15,6 +15,9 @@ else{
 //   header("Location: register_user.php");
   include('includes/top_header.php');
 }
+
+$connection = new Connection();
+$result = $connection->get_stories_by_order();
 ?> 
 
 <!DOCTYPE html>
@@ -28,95 +31,7 @@ else{
     ?>
 
 
-    <!-- 
-        modal testing     -->
-
-        <!-- <style>
-
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  -webkit-animation-name: fadeIn; /* Fade in the background */
-  -webkit-animation-duration: 0.4s;
-  animation-name: fadeIn;
-  animation-duration: 0.4s
-}
-
-/* Modal Content */
-.modal-content {
-  position: fixed;
-  bottom: 0;
-  background-color: #fefefe;
-  width: 100%;
-  -webkit-animation-name: slideIn;
-  -webkit-animation-duration: 0.4s;
-  animation-name: slideIn;
-  animation-duration: 0.4s
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  float: right;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: black;
-  color: white;
-}
-
-.modal-body {padding: 2px 16px;}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: black;
-  color: white;
-}
-.modal_color{
-    color:white;    
-}
-
-/* Add Animation */
-@-webkit-keyframes slideIn {
-  from {bottom: -300px; opacity: 0} 
-  to {bottom: 0; opacity: 1}
-}
-
-@keyframes slideIn {
-  from {bottom: -300px; opacity: 0}
-  to {bottom: 0; opacity: 1}
-}
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
-}
-</style> -->
+   
 <!-- modal testing ends -->
     <meta charset="UTF-8">
     <meta name="description" content="Male_Fashion Template">
@@ -151,64 +66,7 @@ else{
         include('includes/modalcontent.php');
         include('includes/chatsupportapi.php');
     ?>
-    <!-- modal testing -->
-    <!-- <div id="myModal" class="modal"> -->
-
-  <!-- Modal content -->
-  <!-- <div class="modal-content">
-    <div class="modal-header">
-    <H3 class=modal_color>Welcome to VOYAGER <b><?php echo $user["fname"];  ?></b>&#9973;</h3>
-      <a class="close">&#10006;</a>
     
-    </div>
-    <div class="modal-body">
-      <h5>Welocome to the VOYAGER customer portal!</h5>
-      <p>Here you can Add, Delete, Update Travel Stories, that further helps to other travelers to make<br>
-      there journey memorable</p>
-      <br>
-      <a href="user_portal.php" class="primary-btn"><?php echo $user["fname"];  ?>'s Portal<span class="arrow_right"></span></a>
-      
-    </div>
-    <div class="modal-footer">
-      <h3></h3>
-    </div>
-  </div>
-
-</div> -->
-<!-- modal testing ends -->
-
-    <!-- Offcanvas Menu Begin -->
-    <!-- <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__option">
-            <div class="offcanvas__links">
-                <a href="#">Sign in</a>
-                <a href="#">FAQs</a>
-            </div>
-            <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
-                <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                </ul>
-            </div>
-        </div>
-        <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-            <a href="#"><img src="img/icon/heart.png" alt=""></a>
-            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-            <div class="price">$0.00</div>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <div class="offcanvas__text">
-            <p>Free shipping, 30-day return or refund guarantee.</p>
-        </div>
-    </div> -->
-    <!-- Offcanvas Menu End -->
-
-    <!-- Header Section Begin -->
-
     <?php
         // include('loggedin_header.php');
     ?>
@@ -497,9 +355,7 @@ else{
         </div>
     </section>
     <!-- Instagram Section End -->
-
-    <!-- Latest Blog Section Begin -->
-    <section class="latest spad">
+   <section class="latest spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -509,40 +365,39 @@ else{
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-5.jpg"></div>
-                        <div class="blog__item__text">
-                            <span><img src="img/icon/calendar.png" alt=""> 16 February 2020</span>
-                            <h5>Volcanic Island - Santorini Greece</h5>
-                            <a href="blog.php">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-6.jpg"></div>
-                        <div class="blog__item__text">
-                            <span><img src="img/icon/calendar.png" alt=""> 21 February 2020</span>
-                            <h5>Taj Mahal - Why a Wonder of World?</h5>
-                            <a href="blog.php">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="blog__item">
-                        <div class="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg"></div>
-                        <div class="blog__item__text">
-                            <span><img src="img/icon/calendar.png" alt=""> 28 February 2020</span>
-                            <h5>Father-Son go on Trip to Banff</h5>
-                            <a href="blog.php">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="row justify-content-center">
+
+
+                        <?php
+                            while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
+                                $str_to_print = null;
+                                $str_to_print .= "<div class='col-lg-4 col-md-6 col-sm-6'>
+                                                <div class='blog__item'>";
+                                $str_to_print .= "<div class='col mb-5'><div class='card h-80'> <img class='card-img-top' src='data:image/jpg;charset=utf8;base64,";
+                                $encodedValue = base64_encode($row['image']);
+                                $str_to_print .=  "$encodedValue '/>";
+                                $str_to_print .= "<div class='blog__item__text'>";
+                                $str_to_print .= "<span><img src='img/icon/calendar.png'>";
+                                $str_to_print .=  date('Y/m/d') ; 
+                                $str_to_print .= "</span>";
+                                $str_to_print .= "<h4> {$row['traveltitle']}</h4>";
+                                $str_to_print .= "<img src='img/blog/user.jpg'  width='20' height='20'> <b> {$row['postby']}<br></b>";
+                                // $str_to_print .= " <b>{$row['traveldisc']}</b><br>";
+                                $str_to_print .= " <a href='blog-details.php?id={$row['id']}''>Read More</a>
+                                </div></div></div>";
+                                // 
+                                $str_to_print .= "  </div></div>";
+
+                               
+                                echo $str_to_print;
+                            }
+                        ?>
+
+
+  
+     </section>
+
+
    <!-- Latest Blog Section End -->
    
    <?php

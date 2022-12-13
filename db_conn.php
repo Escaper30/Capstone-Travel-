@@ -27,6 +27,13 @@ class Connection{
     $result = @mysqli_query($this->conn,$query);
     return $result;
   }
+
+  function get_stories_by_order() {
+    
+    $query = 'SELECT * FROM travelstories ORDER BY id DESC LIMIT 3; ';
+    $result = @mysqli_query($this->conn,$query);
+    return $result;
+  }
   
 
 //   function delete_stories($id) {
