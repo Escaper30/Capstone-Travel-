@@ -113,7 +113,7 @@ include('includes/shopheader.php')
         <div class="product__details__content">
             <div class="container">
                 <div class="row d-flex justify-content-center">
-                <img src="<?php echo $row['pr_image'] ?>" width="300px" height="300px"> </img>
+                <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?> " width="300px" height="300px"> </img>
                     <div class="col-lg-8">
                         
                         <div class="product__details__text">

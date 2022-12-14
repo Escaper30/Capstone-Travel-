@@ -65,7 +65,7 @@ include('includes/shopheader.php')
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg">
-								<img src="<?php echo $row['pr_image'] ?>" width="auto" height="auto">
+								<img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?> "  width="auto" height="auto">
                                    
                                 </div>
 								<h5 style = "margin-top: 3%"><b><?php echo $row['pr_title']; ?></b></h5>
