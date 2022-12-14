@@ -34,7 +34,15 @@ class Connection{
     $result = @mysqli_query($this->conn,$query);
     return $result;
   }
+	
 
+  function shop_details() {
+    
+    $query = 'SELECT * FROM products';
+    $result = @mysqli_query($this->conn,$query);
+    return $result;
+  }
+  
 
 
 
@@ -153,7 +161,12 @@ class checkout extends Connection{
   }
 }
 
-
+class shopdetails extends Connection{
+  public function shopdetails($pr_id){
+  $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE pr_id = $pr_id ;");
+  return $query;
+}
+}
 // class travelstories extends Connection{
 //   public function travelstories($travelimage , $traveltitle, $traveldisc, $travelspec, $postby){
 //     $duplicate = mysqli_query($this->conn, "SELECT * FROM travelstories WHERE traveltitle = '$traveltitle'");
