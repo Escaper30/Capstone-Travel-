@@ -13,24 +13,37 @@ else{
   include('../includes/admin_topheader.php');
 }
 
-$add = new AddProducts();
-if(isset($_POST["pr_submit"])){
-  $result = $add->addproducts($_POST["pr_title"], $_POST["pr_place"],  $_POST["pr_cost"], $_POST["pr_details"], $_POST["image"]);
-
-  if($result == 1){
-    echo
-    "<script> alert('Added Products Successfully'); </script>";
-    header("Location: ./view_product.php");
-  }
-//   else if($result == 10){
-//     echo
-//     "<script> alert('Username or Email Is Already Taken'); </script>";
-//   }
-//   else if($result == 100){
-//     echo
-//     "<script> alert('Password Doesn't Match'); </script>";
-//   }
+$error = null;
+ $pr_id = " ";
+if(!empty($_GET['pr_id'])){
+    $pr_id = $_GET['pr_id'];
+} else {
+    $pr_id = null;
+    // $error = "<p> Error! id not recieved.";
+   
 }
+
+if($error == null){
+    
+    $getproducts = new getproducts();
+    
+    $result = $getproducts->getproducts($pr_id);
+    
+    if(mysqli_num_rows($result) == 1){
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+        $image = $row['image'];
+        $pr_title = $row['pr_title'];
+        $pr_place = $row['pr_place'];
+        $pr_cost = $row['pr_cost'];
+        $pr_details = $row['pr_details'];
+        
+    } // else-> inccorect entry in db
+} else {
+    echo $error;
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -106,7 +119,7 @@ if(isset($_POST["pr_submit"])){
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
-                        <h4>Add Products</h4>
+                        <h4>Update Products</h4>
                         
                     </div>
                 </div>
@@ -119,7 +132,7 @@ if(isset($_POST["pr_submit"])){
     <section class="checkout spad">
         <div class="container">
             <div class="checkout__form">
-                <form action="add_product.php" method="post" autocomplete="off" enctype="multipart/form-data">
+                <form action="update_product.php" method="post" autocomplete="off" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-lg-8 col-md-6">
                             <!-- <h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="#">Click
@@ -129,13 +142,14 @@ if(isset($_POST["pr_submit"])){
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Title<span>*</span></p>
-                                        <input type="text" name="pr_title" required>
+                                        <input type="text" name="pr_title" value="<?php echo $pr_title; ?> " required>
+                                        <input  type="hidden" id="pr_id" name="pr_id" value="<?php echo $pr_id; ?>">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Place<span>*</span></p>
-                                        <input type="text" pattern="[A-Za-z]{1,32}" name="pr_place" required>
+                                        <input type="text" pattern="[A-Za-z]{1,32}" name="pr_place" value="<?php echo $pr_place; ?> " required>
                                     </div>
                                 </div>
                             </div>
@@ -164,27 +178,22 @@ if(isset($_POST["pr_submit"])){
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Cost<span>*</span></p>
-                                        <input type="number" name="pr_cost" required>
+                                        <input type="text" name="pr_cost" value="<?php echo $pr_cost; ?> " required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Details<span>*</span></p>
-                                        <input type="text" name="pr_details" required>
+                                        <input type="text" name="pr_details" value="<?php echo $pr_details; ?> " required>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="">
-                                        <p>Image<span>*</span></p>
-                                        <input type="file" name="image" required>
-                                      
-    <!-- <fieldset>
-        <input type="file" name="pr_image"/>
-    </fieldset> -->
-
-                                    </div>
-                                </div>
+                                <div class="col-lg-12">
+                    <div class="blog__details__pic">
+                    <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?> " width='500' height='600'/>
+                    </div>
+                </div>
                             </div>
+                            <input type="file" name="image" value="" required>
                             <!-- <div class="checkout__input__checkbox">
                                 <label for="acc">
                                     Create an account?
@@ -252,7 +261,7 @@ if(isset($_POST["pr_submit"])){
                             </div> -->
                         </div>
                     </div>
-                    <button type="submit" name="pr_submit" value="submit" class="primary-btn">Add Products<span class="arrow_right"></span></button> 
+                    <button type="submit" name="pr_submit" value="submit" class="primary-btn">Update Products<span class="arrow_right"></span></button> 
               </form>
             </div>
         </div>

@@ -20,7 +20,13 @@ class Connection{
     $result = @mysqli_query($this->conn,$query);
     return $result;
   }
-
+ 
+  function get_products() {
+    
+    $query = 'SELECT * FROM products';
+    $result = @mysqli_query($this->conn,$query);
+    return $result;
+  }
 }
 
 class getstories extends Connection{
@@ -124,21 +130,91 @@ class AdminSelect extends Connection{
   }
 }
 
-class AddProducts extends Connection{
-  public function addproducts($pr_title, $pr_place, $pr_cost, $pr_details, $pr_image){
+class addproducts extends Connection{
+  public function addproducts($pr_title, $pr_place, $pr_cost, $pr_details, $image){
     $pr_duplicate = mysqli_query($this->conn, "SELECT * FROM products WHERE pr_title = '$pr_title'");
     if(mysqli_num_rows($pr_duplicate) > 0){
       return 10;
       // Username or email is already taken
     }
     else{
-      
-        $pr_query = "INSERT INTO products VALUES('', '$pr_title', '$pr_place', '$pr_cost', '$pr_details', '$pr_image')";
+
+      $status = $statusMsg = ''; 
+      if(isset($_POST["pr_submit"])){ 
+          $status = 'error'; 
+          if(!empty($_FILES["image"]["name"])) { 
+              // Get file info 
+              $fileName = basename($_FILES["image"]["name"]); 
+              $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+               
+              // Allow certain file formats 
+              $allowTypes = array('jpg','png','jpeg','gif'); 
+              if(in_array($fileType, $allowTypes)){ 
+                  $image = $_FILES['image']['tmp_name']; 
+                  $imgContent = addslashes(file_get_contents($image)); 
+
+        $pr_query = "INSERT INTO products VALUES('', '$pr_title', '$pr_place', '$pr_cost', '$pr_details', '$imgContent')";
         mysqli_query($this->conn, $pr_query);
         return 1;
+
+              }
+            }
+          }
      
     }
   }
 }
 
+// delete products
 
+class deleteproducts extends Connection{
+  public function deleteproducts($pr_id){
+  
+  
+          $query =  mysqli_query($this->conn, "DELETE FROM products WHERE pr_id = $pr_id ;");
+          
+          return $query;
+   
+    }
+  }
+
+
+// fetch product
+
+class getproducts extends Connection{
+  public function getproducts($pr_id){
+  $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE pr_id = $pr_id ;");
+  return $query;
+}
+}
+
+//update product
+class updateproducts extends Connection{
+  public function updateproducts($pr_id, $image, $pr_title, $pr_place, $pr_cost, $pr_details){
+
+    // $status = $statusMsg = ''; 
+    // if(isset($_POST["submit"])){ 
+    //     $status = 'error'; 
+    //     if(!empty($_FILES["image"]["name"])) { 
+    //         // Get file info 
+    //         $fileName = basename($_FILES["image"]["name"]); 
+    //         $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+             
+    //         // Allow certain file formats 
+    //         $allowTypes = array('jpg','png','jpeg','gif'); 
+    //         if(in_array($fileType, $allowTypes)){ 
+    //             $image = $_FILES['image']['tmp_name']; 
+    //             $imgContent = addslashes(file_get_contents($image));
+                
+     $sql= "UPDATE products SET pr_title = '$pr_title', pr_place = '$pr_place', pr_cost = '$pr_cost', pr_details = '$pr_details' WHERE  pr_id = '$pr_id';";
+    echo $sql;
+     $query = mysqli_query($this->conn, $sql);
+
+  // $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE product_id = $product_id ;");
+  return $query;
+        //     }
+        //   }
+        // }
+          
+}
+}

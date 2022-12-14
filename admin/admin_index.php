@@ -103,17 +103,17 @@ else{
             <h4 class="text-right">Profile Settings</h4>
         </div>
         <div class="row mt-2">
-            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value="<?php echo $admin["ad_fname"]; ?>"></div>
-            <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="<?php echo $admin["ad_lname"]; ?>" placeholder="surname"></div>
+            <div class="col-md-6"><label class="labels">Name</label><h4><b><?php echo $admin["ad_fname"]; ?></b></h4></div>
+            <div class="col-md-6"><label class="labels">Surname</label><h4><b><?php echo $admin["ad_lname"]; ?></b></h4></div>
         </div>
         <div class="row mt-3">
-            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value="<?php echo $admin["ad_phone"]; ?>"></div>
+            <div class="col-md-12"><label class="labels">Mobile Number</label><h4><b><?php echo $admin["ad_phone"]; ?></b></h4></div>
             
-            <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value="<?php echo $admin["ad_email"]; ?>"></div>
+            <div class="col-md-12"><label class="labels">Email ID</label><h4><b><?php echo $admin["ad_email"]; ?></b></h4></div>
             
         </div>
        
-        <div class="mt-5 text-center"><button class="btn btn-primary profile-button"type="submit" class="submit" name="submit" id="submit" value="submit">Save Profile</button></div>
+       
     </div>
 </div>
 
