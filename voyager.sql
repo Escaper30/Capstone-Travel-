@@ -81,6 +81,7 @@ ALTER TABLE `contact`
 ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
+
 CREATE TABLE `checkout` (
   `id` int(11) NOT NULL,
   `fname` varchar(50) NOT NULL,
@@ -111,15 +112,16 @@ CREATE TABLE `travelstories` (
 ) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8mb4;
 
 SELECT * FROM travelstories;
+
 CREATE TABLE `products` (
-  `pr_id` int(11) NOT NULL,
+  `pr_id` int(11) unsigned NOT NULL AUTO_INCREMENT ,
   `pr_title` varchar(50) NOT NULL,
   `pr_place` varchar(50) NOT NULL,
   `pr_cost` double NOT NULL,
   `pr_details` varchar(500) NOT NULL,
-  `pr_image` varchar(50) NOT NULL
+  `image` longblob NOT NULL,
+   PRIMARY KEY (`pr_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
 INSERT INTO `products` (`pr_id`, `pr_title`, `pr_place`, `pr_cost`, `pr_details`, `pr_image`) VALUES
 (2, 'Maldives - Awesome place', 'Maldives', 255, 'Maldives', 'img/product/maldives.jpg');
