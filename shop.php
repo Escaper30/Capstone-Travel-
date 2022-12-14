@@ -68,13 +68,15 @@ include('includes/shopheader.php')
 								<img src="<?php echo $row['pr_image'] ?>" width="auto" height="auto">
                                    
                                 </div>
+								<h5 style = "margin-top: 3%"><b><?php echo $row['pr_title']; ?></b></h5>
                                 <div class="product__item__text">
-                                    <h6><?php echo $row['pr_title']; ?></h6>
-                                    <a  class="add-cart" href="add_cart.php?id=<?php echo $row['pr_id']; ?>" >+ Add To Cart</a>
-                                   
-                                    <h5><b>$<?php echo $row['pr_cost']; ?></b></h5>
-                                    
-                                </div>
+								<h5><b>$<?php echo $row['pr_cost']; ?></b></h5>
+                                   <a  href="shop-details.php?id=<?php echo $row['pr_id']; ?>">View Details</a>
+								   <br><br> </div>
+								   
+								   <a class='primary-btn'href="add_cart.php?id=<?php echo $row['pr_id']; ?>">Add to Cart</a>
+								 
+                                
                             </div>
                         </div>
 			
