@@ -14,11 +14,59 @@ class Connection{
     $this->conn = mysqli_connect($this->host, $this->user, $this->password, $this->db_name);
   }
   
+  function get_stories() {
+    
+    $query = 'SELECT * FROM travelstories';
+    $result = @mysqli_query($this->conn,$query);
+    return $result;
+  }
 
 }
 
+class getstories extends Connection{
+  public function getstories($id){
+  $query =  mysqli_query($this->conn, "SELECT * FROM travelstories WHERE id = $id ;");
+  return $query;
+}
+}
 
+class travelstories extends Connection{
+  public function travelstories($travelimage , $traveltitle, $traveldisc, $travelspec, $postby){
+    $duplicate = mysqli_query($this->conn, "SELECT * FROM travelstories WHERE traveltitle = '$traveltitle'");
+    if(mysqli_num_rows($duplicate) > 0){
+      return 10;
+     
+    }
+    else{
+     
+        $query = "INSERT INTO travelstories VALUES('', '$travelimage','$traveltitle','$traveldisc', '$travelspec','$postby')";
+        mysqli_query($this->conn, $query);
+        return 1;
+    
+    }
+  }
+}
 
+class deletestories extends Connection{
+  public function deletestories($id){
+  
+  
+          $query =  mysqli_query($this->conn, "DELETE FROM travelstories WHERE id = $id ;");
+          
+          return $query;
+   
+    }
+  }
+class updatestories extends Connection{
+  public function updatestories($id, $travelimage, $traveltitle, $traveldisc, $travelspec, $postby){
+     $sql= "UPDATE travelstories SET travelimage = '$travelimage', traveltitle = '$traveltitle', traveldisc = '$traveldisc', travelspec = '$travelspec', postby = '$postby' WHERE  id = '$id';";
+    echo $sql;
+     $query = mysqli_query($this->conn, $sql);
+
+  // $query =  mysqli_query($this->conn, "SELECT * FROM products WHERE product_id = $product_id ;");
+  return $query;
+}
+}
 class AdminRegister extends Connection{
   public function adminregistration($ad_fname, $ad_lname, $ad_phone, $ad_email, $ad_password, $ad_confirm){
     $ad_duplicate = mysqli_query($this->conn, "SELECT * FROM admin WHERE ad_fname = '$ad_fname' OR ad_email = '$ad_email'");

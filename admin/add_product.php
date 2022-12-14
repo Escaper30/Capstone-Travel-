@@ -177,6 +177,11 @@ if(isset($_POST["pr_submit"])){
                                     <div class="checkout__input">
                                         <p>Image<span>*</span></p>
                                         <input type="text" name="pr_image" required>
+                                      
+    <!-- <fieldset>
+        <input type="file" name="pr_image"/>
+    </fieldset> -->
+
                                     </div>
                                 </div>
                             </div>

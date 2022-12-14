@@ -13,7 +13,7 @@ if(!empty($_SESSION["ad_id"])){
 // }
 else{
 //   header("Location: register_user.php");
-  include('../includes/admin_top_header.php');
+  include('../includes/admin_topheader.php');
 }
 ?>
 <!DOCTYPE html>
@@ -83,8 +83,45 @@ else{
         include('../includes/admin_topheader.php');
     ?>
     <!-- Header Section End -->
+    <center>
+        <h2>
+        Welcome Admin <b><?php echo $admin["ad_fname"]; ?>&nbsp;<?php echo $admin["ad_lname"]; ?></b>
+        </h2>
+    </center><br><hr>
 
-    
+    <form action="admin_index.php" method="post">
+        
+
+        <div class="container rounded bg-white mt-5 mb-5">
+<div class="row">
+<div class="col-md-6 border-right">
+    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold"><?php echo $admin["ad_fname"]; ?> <?php echo $admin["ad_lname"]; ?></span><span class="text-black-50"><?php echo $admin["ad_email"]; ?></span><span> </span></div>
+</div>
+<div class="col-md-6 ">
+    <div class="p-3 py-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="text-right">Profile Settings</h4>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value="<?php echo $admin["ad_fname"]; ?>"></div>
+            <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="<?php echo $admin["ad_lname"]; ?>" placeholder="surname"></div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value="<?php echo $admin["ad_phone"]; ?>"></div>
+            
+            <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value="<?php echo $admin["ad_email"]; ?>"></div>
+            
+        </div>
+       
+        <div class="mt-5 text-center"><button class="btn btn-primary profile-button"type="submit" class="submit" name="submit" id="submit" value="submit">Save Profile</button></div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</form>
 
     <!-- Js Plugins -->
     <script src="../js/jquery-3.3.1.min.js"></script>
