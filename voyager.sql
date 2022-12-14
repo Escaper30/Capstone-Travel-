@@ -123,8 +123,8 @@ CREATE TABLE `products` (
    PRIMARY KEY (`pr_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `products` (`pr_id`, `pr_title`, `pr_place`, `pr_cost`, `pr_details`, `pr_image`) VALUES
-(2, 'Maldives - Awesome place', 'Maldives', 255, 'Maldives', 'img/product/maldives.jpg');
+-- INSERT INTO `products` (`pr_id`, `pr_title`, `pr_place`, `pr_cost`, `pr_details`, `pr_image`) VALUES
+-- (2, 'Maldives - Awesome place', 'Maldives', 255, 'Maldives', 'img/product/maldives.jpg');
 -- (2, 'MICROSOFT Surface Pro 4 & Typecover - 128 GB', 799, 'images/2.jpg'),
 -- (3, 'DELL Inspiron 15 5000 15.6', 599, 'images/3.jpg'),
 -- (4, 'LENOVO Ideapad 320s-14IKB 14\" Laptop - Grey', 399, 'images/4.jpg'),
