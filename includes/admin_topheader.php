@@ -36,30 +36,30 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a href="./index.php"><img src="../img/logo_capstone/logo_head.png" alt="" height="35px" width="180px"></a>
+                        <a href="#"><img src="../img/logo_capstone/logo_head.png" alt="" height="35px" width="180px"></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li class="active"><a href="./index.php">Home</a></li>
+                            <li class="active"><a href="./admin_index.php">Home</a></li>
                             <li><a href="#">Products</a>
                                 <ul class="dropdown">
                                     <li><a href="./add_product.php">Add Products</a></li>
-                                    <li><a href="./shop-details.html">Update Products</a></li>
-                                    <li><a href="./shopping-cart.html">Delete Products</a></li>
+                                    <li><a href="./view_product.php">View Products</a></li>
+                                    <li><a href="#">Delete Products</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Travel Stories</a>
                                 <ul class="dropdown">
-                                    <li><a href="./about.html">Add Stories</a></li>
-                                    <li><a href="./shop-details.html">Update Stories</a></li>
-                                    <li><a href="./shopping-cart.html">Delete Stories</a></li>
+                                    <!-- <li><a href="./about.html">Add Stories</a></li> -->
+                                    <!-- <li><a href="./shop-details.html">Update Stories</a></li> -->
+                                    <li><a href="./admin_delete_stories.php">Delete Stories</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">User</a>
                                 <ul class="dropdown">
-                                    <li><a href="./shopping-cart.html">Delete User</a></li>
+                                    <li><a href="./admin_allusers.php">All User</a></li>
                                 </ul>
                             </li>
                         </ul>
