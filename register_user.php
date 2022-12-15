@@ -144,23 +144,7 @@ if(isset($_POST["submit"])){
                                 <p>Country<span>*</span></p>
                                 <input type="text" name="country" required>
                             </div>
-                            <!-- <div class="checkout__input">
-                                <p>Address<span>*</span></p>
-                                <input type="text" placeholder="Street Address" class="checkout__input__add">
-                                <input type="text" placeholder="Apartment, suite, unite ect (optinal)">
-                            </div> -->
-                            <!-- <div class="checkout__input">
-                                <p>Town/City<span>*</span></p>
-                                <input type="text">
-                            </div> -->
-                            <!-- <div class="checkout__input">
-                                <p>Country/State<span>*</span></p>
-                                <input type="text">
-                            </div> -->
-                            <!-- <div class="checkout__input">
-                                <p>Postcode / ZIP<span>*</span></p>
-                                <input type="text">
-                            </div> -->
+                            
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
@@ -183,7 +167,7 @@ if(isset($_POST["submit"])){
                                 <div class="col-lg-6">
                                     <div class="checkout__input">
                                         <p>Password<span>*</span></p>
-                                        <input type="confirm password" name="confirm" required>
+                                        <input type="password" name="confirm" required>
                                     </div>
                                 </div>
                             </div>

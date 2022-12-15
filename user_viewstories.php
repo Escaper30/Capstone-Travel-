@@ -101,12 +101,13 @@ else{
                                 $encodedValue = base64_encode($row['image']);
                                 $str_to_print .=  "$encodedValue '/>";
                                 $str_to_print .= "<div class='card-body p-4'> <div class='text-center'>";
-                                $str_to_print .= "<h5 class='fw-bolder'> {$row['traveltitle']}</h5>";
-                                
-                                $str_to_print .= " <b>{$row['traveldisc']}</b><br>";
-                                $str_to_print .= " {$row['travelspec']} <br>";
-                                $str_to_print .= " <b>postby</b> : {$row['postby']}<br>";
-                                $str_to_print .= " <b>id</b> : {$row['id']}</div> </div>";
+                                $str_to_print .= "<h4 style='font-weight:bold;' class='fw-bolder'> {$row['traveltitle']}</h4>";
+
+                                $str_to_print .= " <b>Post By</b> : {$row['postby']}<br>";
+                                $str_to_print .= " <b>Date </b> : "; 
+                                $str_to_print .=  date('Y/m/d') ; 
+
+                                $str_to_print .= "</div> </div>";
 
                                 $str_to_print .= "<div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
                                 <div class='text-center'><a class='btn btn-outline-success mt-auto' href='user_editstories.php?id={$row['id']}'>Edit Story</a><br><br><a class='btn btn-outline-danger  mt-auto' href='user_deletestories.php?id={$row['id']}'>Delete</a></div></div></div></div>";

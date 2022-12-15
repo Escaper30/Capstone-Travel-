@@ -326,7 +326,7 @@ $result = $connection->get_stories_by_order();
                                 $str_to_print .=  date('Y/m/d') ; 
                                 $str_to_print .= "</span>";
                                 $str_to_print .= "<h4> {$row['traveltitle']}</h4>";
-                                $str_to_print .= "<img src='img/blog/user.jpg'  width='20' height='20'> <b> {$row['postby']}<br></b>";
+                                $str_to_print .= "<img src='img/blog/user.png'  width='20' height='20'> <b> {$row['postby']}<br></b>";
                                 // $str_to_print .= " <b>{$row['traveldisc']}</b><br>";
                                 $str_to_print .= " <a href='blog-details.php?id={$row['id']}''>Read More</a>
                                 </div></div></div>";
