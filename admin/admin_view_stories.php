@@ -18,7 +18,7 @@ else{
 }
 
 $connection = new Connection();
-$result = $connection->get_products();
+$result = $connection->get_stories();
 
 ?>
 
@@ -34,7 +34,7 @@ $result = $connection->get_products();
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Us | Voyager</title>
+    <title>Admin | Voyager</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -65,7 +65,7 @@ $result = $connection->get_products();
    
     <!-- Header Section End -->
     <center>
-        <h2>View your all Products </h2>
+        <h2>View your all Travel Stories </h2>
     </center>
 
     <section class="py-5">
@@ -82,32 +82,25 @@ $result = $connection->get_products();
                                 $encodedValue = base64_encode($row['image']);
                                 $str_to_print .=  "$encodedValue '/>";
                                 $str_to_print .= "<div class='card-body p-4'> <div class='text-center'>";
-                                $str_to_print .= "<h5 class='fw-bolder'><b> {$row['pr_title']}</b></h5>";
+                                $str_to_print .= "<h5 class='fw-bolder'> {$row['traveltitle']}</h5>";
                                 
-                                $str_to_print .= " Place: <b>{$row['pr_place']}</b><br>";
-                                $str_to_print .= " Cost: <b>{$row['pr_cost']} </b><br>";
-                                $str_to_print .= " <b>id</b> : {$row['pr_id']}</div> </div>";
+                                $str_to_print .= " <b>{$row['traveldisc']}</b><br>";
+                                $str_to_print .= " {$row['travelspec']} <br>";
+                                $str_to_print .= " <b>postby</b> : {$row['postby']}<br>";
+                                $str_to_print .= " <b>id</b> : {$row['id']}</div> </div>";
 
                                 $str_to_print .= "<div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
-                                <div class='text-center'><a class='btn btn-outline-success mt-auto' href='edit_product.php?pr_id={$row['pr_id']}'>Edit Story</a><br><br><a class='btn btn-outline-danger  mt-auto' href='delete_product.php?pr_id={$row['pr_id']}'>Delete</a></div></div></div></div>";
+                                <div class='text-center'><a class='btn btn-outline-danger  mt-auto' href='admin_deletestories.php?id={$row['id']}'>Delete</a></div></div></div></div>";
 
                                 echo $str_to_print;
                             }
                         ?>
 
-                        
-
-
-
-          
+                          
                     
                 </div>
             </div>
-
-    
-                    
-                </div>
-            </div>
+        
 
     
     

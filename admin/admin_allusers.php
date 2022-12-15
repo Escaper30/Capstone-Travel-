@@ -18,7 +18,7 @@ else{
 }
 
 $connection = new Connection();
-$result = $connection->get_products();
+$result = $connection->get_alluser();
 
 ?>
 
@@ -34,7 +34,7 @@ $result = $connection->get_products();
     <meta name="keywords" content="Male_Fashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Us | Voyager</title>
+    <title>Admin | Voyager</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -65,52 +65,57 @@ $result = $connection->get_products();
    
     <!-- Header Section End -->
     <center>
-        <h2>View your all Products </h2>
+        <h2>View your all Users</h2><br>
     </center>
 
-    <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <!-- <div class="col mb-5">
-                        <div class="card h-100"> -->
+    <table class="table" style="width:80%;margin-left:10%" >
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">User Id</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Country</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
 
+    
                         <?php
                             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
                                 $str_to_print = null;
-                                $str_to_print .= "<div class='col mb-5'><div class='card h-100'>";
-                                $str_to_print .= "<img class='card-img-top' src='data:image/jpg;charset=utf8;base64,";
-                                $encodedValue = base64_encode($row['image']);
-                                $str_to_print .=  "$encodedValue '/>";
-                                $str_to_print .= "<div class='card-body p-4'> <div class='text-center'>";
-                                $str_to_print .= "<h5 class='fw-bolder'><b> {$row['pr_title']}</b></h5>";
+                                $str_to_print .= "<tbody><tr><th>{$row['id']}</th>";
                                 
-                                $str_to_print .= " Place: <b>{$row['pr_place']}</b><br>";
-                                $str_to_print .= " Cost: <b>{$row['pr_cost']} </b><br>";
-                                $str_to_print .= " <b>id</b> : {$row['pr_id']}</div> </div>";
+                                $str_to_print .= "<td>{$row['fname']}</td>";
+                                $str_to_print .= "<td>{$row['lname']}</td>";
+                                
+                                $str_to_print .= " <td>{$row['country']}</td>";
+                                $str_to_print .= " <td>{$row['phone']}</td>";
+                                $str_to_print .= " <td>{$row['email']}</td>";
+                                $str_to_print .= " <td><a class='btn btn-outline-danger  mt-auto' href='admin_deleteuser.php?id={$row['id']}'>Delete</a></td></tbody>";
 
-                                $str_to_print .= "<div class='card-footer p-4 pt-0 border-top-0 bg-transparent'>
-                                <div class='text-center'><a class='btn btn-outline-success mt-auto' href='edit_product.php?pr_id={$row['pr_id']}'>Edit Story</a><br><br><a class='btn btn-outline-danger  mt-auto' href='delete_product.php?pr_id={$row['pr_id']}'>Delete</a></div></div></div></div>";
+                               
 
                                 echo $str_to_print;
                             }
                         ?>
 
-                        
+                          
 
+</table>
 
-
-          
-                    
-                </div>
-            </div>
+               
+        
 
     
-                    
-                </div>
-            </div>
+   
 
-    
-    
+
+
+
+
+
        
     
 

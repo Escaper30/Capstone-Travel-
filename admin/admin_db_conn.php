@@ -27,6 +27,14 @@ class Connection{
     $result = @mysqli_query($this->conn,$query);
     return $result;
   }
+
+  function get_alluser() {
+    
+    $query = 'SELECT * FROM user';
+    $result = @mysqli_query($this->conn,$query);
+    return $result;
+  }
+  
 }
 
 class getstories extends Connection{
@@ -177,6 +185,17 @@ class deleteproducts extends Connection{
    
     }
   }
+
+  class deleteuser extends Connection{
+    public function deleteuser($id){
+    
+    
+            $query =  mysqli_query($this->conn, "DELETE FROM user WHERE id = $id ;");
+            
+            return $query;
+     
+      }
+    }
 
 
 // fetch product
