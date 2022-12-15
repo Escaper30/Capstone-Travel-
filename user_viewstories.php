@@ -30,7 +30,7 @@ else{
 //          $result = $travelstories->travelstories($_POST["travelimage"],$_POST["traveltitle"], $_POST["traveldisc"], $_POST["travelspec"],$_POST["postby"]);
 //         }
 // $connection = new Connection();
-// $result = $connection->get_users($_SESSION["fname"]);
+// $result = $connection->get_users();
 
 ?> 
 
@@ -123,7 +123,7 @@ else{
                     
                 </div>
             </div>
-
+        
     
     
        

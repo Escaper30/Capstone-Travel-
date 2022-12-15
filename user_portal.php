@@ -123,7 +123,7 @@ $travelstories = new travelstories();
                         <h2><input type="text" name="traveltitle" id="traveltitle" value=" "></h2>
                         <ul>
                             <li><h4><b><?php echo $user["fname"]; ?></b></h4></li>
-                            <li>February 21, 2019</li>
+                            <li><?php echo " " . date("Y/m/d") . "<br>";?></li>
                             
                         </ul>
                     </div>
@@ -148,7 +148,7 @@ $travelstories = new travelstories();
                     <input  type="hidden" id="postby" name="postby" value="<?php echo $user["fname"];  ?>">
                     <input type="hidden" class="form-control" name="image" id="image" value="">
 
-                    <h5><b>Enter Travel Discription</b></h5>
+                    <h5><b>Enter Travel Description</b></h5>
                     <div class="custom-file">
                    
                     <input type="file"  class="custom-file-input" id="inputGroupFile03" name="image" id="image" value="">
@@ -158,16 +158,16 @@ $travelstories = new travelstories();
 
 
 
-                    <p><b>Enter Travel Discription</b></p>
+                    <p><b>Enter Travel Description</b></p>
 
 
                     <p>
-                    <textarea name="traveldisc" id="traveldisc"  rows="10" cols="75" placeholder="Enter your travel setory"></textarea>
+                    <textarea name="traveldisc" id="traveldisc"  rows="10" cols="75" placeholder="Enter your travel story"></textarea>
                     </p>        
                     </div>
                         <div class="blog__details__quote">
                             <i class="fa fa-quote-left"></i>
-                            <p><b>Enter Special Incident in your Travel</b></p>
+                            <p><b>Enter Special Memories from your trip</b></p>
                             <p><textarea name="travelspec" id="travelspec"  rows="10" cols="65"  placeholder="Something Special"></textarea></p>
                             
                             <h6>~<?php echo $user["fname"]; ?> </h6>
@@ -178,10 +178,10 @@ $travelstories = new travelstories();
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="blog__details__author">
                                         <div class="blog__details__author__pic">
-                                            <img src="img/blog/user.jpg" alt="">
+                                            <img src="img/blog/user.png" alt="">
                                         </div>
                                         <div class="blog__details__author__text">
-                                            <h5>Post BY : <i><?php echo $user["fname"]; ?></i></h5>
+                                            <h5>Post By : <i><?php echo $user["fname"]; ?></i></h5>
                                         </div>
                                     </div>
                                 </div>

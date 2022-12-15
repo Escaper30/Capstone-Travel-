@@ -20,7 +20,7 @@ $pdf->SetFont('Arial', 'B', 12);
 // $pdf->Cell(55, 5, 'Reference Code', 0, 0);
 // $pdf->Cell(58, 5, ': 026ETY', 0, 0);
 $pdf->Cell(165, 15, 'Date', 0, 0, 'R');
-$pdf->Cell(0, 15, ': 2022-12-13', 0, 1, 'R');
+$pdf->Cell(0, 15, ': 15-12-2022', 0, 1, 'R');
 // $pdf->Cell(55, 5, 'Amount', 0, 0);
 // $pdf->Cell(58, 5, ': 2674', 0, 0);
 // $pdf->Cell(25, 5, 'Channel', 0, 0);
@@ -34,13 +34,15 @@ $pdf->Cell(58, 5, ': Maldives', 0, 1);
 $pdf->Cell(55, 5, 'No. of Person', 0, 0);
 $pdf->Cell(58, 5, ': 2', 0, 1);
 $pdf->Cell(55, 5, 'Total Charges', 0, 0);
-$pdf->Cell(58, 5, ': $510.00', 0, 1);
+$pdf->Cell(58, 5, ': $498.00', 0, 1);
 // $pdf->Cell(55, 5, 'Product Delivery Charge', 0, 0);
 // $pdf->Cell(58, 5, ': 0', 0, 1);
 $pdf->Line(10, 100, 200, 100);
 $pdf->Ln(10);//Line break
 $pdf->Cell(55, 5, 'Paid by', 0, 0);
-$pdf->Cell(58, 5, ': ABC', 0, 1);
+$pdf->Cell(58, 5, ': Test', 0, 1);
+$pdf->Cell(55, 5, 'Email Id', 0, 0);
+$pdf->Cell(58, 5, ': test@gmail.com', 0, 1);
 $pdf->Line(155, 175, 195, 175);
 $pdf->Ln(32);//Line break
 $pdf->Cell(140, 5, '', 0, 0);

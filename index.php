@@ -85,9 +85,8 @@ $result = $connection->get_stories_by_order();
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
                                 <h6>Travel Recommendation</h6>
-                                <h2>Travel Trip 2030</h2>
-                                <h5><b>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                commitment to exceptional quality.</b></h5>
+                                <h2>Paris</h2>
+                                <h3 style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);"><b>Adventures are the best way to learn.</b></h5>
                                 <!-- <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a> -->
                                 <!-- <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -106,16 +105,9 @@ $result = $connection->get_stories_by_order();
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
                                 <h6>Travel Recommendation</h6>
-                                <h2>Travel Trip</h2>
-                                <h5><b>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                commitment to exceptional quality.</b></h5>
-                                <!-- <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                                <div class="hero__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                </div> -->
+                                <h2>Turkey</h2>
+                                <h3 style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);"><b>Adventures are the best way to learn.</b></h5>
+                                
                             </div>
                         </div>
                     </div>
@@ -127,16 +119,10 @@ $result = $connection->get_stories_by_order();
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
                                 <h6>Travel Recommendation</h6>
-                                <h2>Travel Trip</h2>
-                                <h5><b>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                commitment to exceptional quality.</b></h5>
-                                <!-- <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                                <div class="hero__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                </div> -->
+                                <h2>Santorini</h2>
+                                <h3 style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);"><b>Adventures are the best way to learn.</b></h5>
+
+                                
                             </div>
                         </div>
                     </div>
@@ -158,8 +144,8 @@ $result = $connection->get_stories_by_order();
                             <img src="img/products_capstone/0.jpg" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Dubai - Dream come true</h2>
-                            <a href="shop.php">Shop now</a>
+                            <h2 style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);">Dubai - Dream come true</h2>
+                            <a style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);" href="shop.php">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -169,8 +155,8 @@ $result = $connection->get_stories_by_order();
                             <img src="img/products_capstone/2.jpg" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Travel to Banff</h2>
-                            <a href="shop.php">Shop now</a>
+                            <h2 style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);">Travel to Banff</h2>
+                            <a style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);" href="shop.php">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -180,8 +166,8 @@ $result = $connection->get_stories_by_order();
                             <img src="img/products_capstone/banner3.png" alt="">
                         </div>
                         <div class="banner__item__text">
-                            <h2>Maldive to paradise</h2>
-                            <a href="shop.php">Shop now</a>
+                            <h2 style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);">Maldive to paradise</h2>
+                            <a style="text-shadow: 4px -1px 4px rgba(255, 255, 255, 1);" href="shop.php">Shop now</a>
                         </div>
                     </div>
                 </div>
@@ -216,31 +202,14 @@ $result = $connection->get_stories_by_order();
                         <div class="product__item__text">
                             <h6>Dubai - Dream come true</h6>
                             <a href="shop.php" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$299.00</h5>
-                            <!-- <div class="product__color__select">
-                                <label for="pc-1">
-                                    <input type="radio" id="pc-1">
-                                </label>
-                                <label class="active black" for="pc-2">
-                                    <input type="radio" id="pc-2">
-                                </label>
-                                <label class="grey" for="pc-3">
-                                    <input type="radio" id="pc-3">
-                                </label>
-                            </div> -->
+                            <h5>$310.00</h5>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/egypt1.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/tajmahal.jpg">
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
@@ -248,16 +217,9 @@ $result = $connection->get_stories_by_order();
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6>Egypt</h6>
+                            <h6>Taj Mahal</h6>
                             <a href="shop.php" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$</h5>
+                            <h5>$279</h5>
                            
                         </div>
                     </div>
@@ -275,31 +237,14 @@ $result = $connection->get_stories_by_order();
                         <div class="product__item__text">
                             <h6>Maldives - the paradise</h6>
                             <a href="shop.php" class="add-cart">+ Add To Cart</a>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                            <h5>$</h5>
-                            <!-- <div class="product__color__select">
-                                <label for="pc-7">
-                                    <input type="radio" id="pc-7">
-                                </label>
-                                <label class="active black" for="pc-8">
-                                    <input type="radio" id="pc-8">
-                                </label>
-                                <label class="grey" for="pc-9">
-                                    <input type="radio" id="pc-9">
-                                </label>
-                            </div> -->
+                            <h5>$249</h5>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/thailand.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="img/product/rome.jpg">
                             <ul class="product__hover">
                                 <li><a href="#"><img src="img/icon/heart.png" alt=""></a></li>
                                 <li><a href="#"><img src="img/icon/compare.png" alt=""> <span>Compare</span></a></li>
@@ -307,7 +252,7 @@ $result = $connection->get_stories_by_order();
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6>Thailand</h6>
+                            <h6>Colloseum - The place of Greeks</h6>
                             <a href="shop.php" class="add-cart">+ Add To Cart</a>
                             <div class="rating">
                                 <i class="fa fa-star-o"></i>
@@ -316,7 +261,7 @@ $result = $connection->get_stories_by_order();
                                 <i class="fa fa-star-o"></i>
                                 <i class="fa fa-star-o"></i>
                             </div>
-                            <h5>$</h5>
+                            <h5>$340</h5>
                             
                         </div>
                     </div>

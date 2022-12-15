@@ -68,6 +68,8 @@ $select = new Select();
 if(!empty($_SESSION["id"])){
   $user = $select->selectUserById($_SESSION["id"]);
   include('includes/loggedin_header.php');
+  include('includes/shopheader.php');
+
  
 }
 // else if(empty($_SESSION["id"])){

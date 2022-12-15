@@ -139,10 +139,10 @@ if($error == null){
                                 <div class="col-lg-6 col-md-6 col-sm-6">
                                     <div class="blog__details__author">
                                         <div class="blog__details__author__pic">
-                                            <img src="img/blog/user.jpg" alt="">
+                                            <img src="img/blog/user.png" alt="">
                                         </div>
                                         <div class="blog__details__author__text">
-                                        <h5>Post BY : <i><?php echo $postby; ?></i></h5>
+                                        <h5>Post By : <i><?php echo $postby; ?></i></h5>
                                         </div>
                                     </div>
                                 </div>

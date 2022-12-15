@@ -39,7 +39,7 @@ if($error == null){
         $pr_place = $row['pr_place'];
         $pr_cost = $row['pr_cost'];
         $pr_details = $row['pr_details'];
-        $pr_image = $row['pr_image'];
+        $image = $row['image'];
         
     } // else-> inccorect entry in db
 } else {
