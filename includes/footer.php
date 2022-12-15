@@ -8,7 +8,7 @@
                         <div class="footer__logo">
                             <a href="#"><img src="img/logo_capstone/logo_1.png" width="50%"  alt=""></a>
                         </div>
-                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <p>Of all the books in the world. The best stories are found between the pages of a passport.</p>
                         <a href="#"><img src="img/payment.png" alt=""></a>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
                         
                         <ul>
                             <li><a href="./index.php">Home</a></li>
-                            <li><a href="#">Shop</a></li>
+                            <li><a href="./shop.php">Shop</a></li>
                             <li><a href="./blog.php">Travel Stories</a></li>
                             <li><a href="./contact.php">Contact Us</a></li>
                             <li><a href="./about.php">About Us</a></li>
@@ -26,9 +26,8 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6>other useful links</h6>
+                        <h6>Other Useful Links</h6>
                         <ul>
-                            <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Payment Methods</a></li>
                             <li><a href="#">Delivery</a></li>
                             <li><a href="#">Return & Exchanges</a></li>
@@ -37,7 +36,7 @@
                 </div>
                 <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
                     <div class="footer__widget">
-                        <h6>NewLetter</h6>
+                        <h6>NewsLetter</h6>
                         <div class="footer__newslatter">
                             <p>Be the first one to know about the new travel deals and packages.</p>
                             <form action="newsletter.php" method="post">

@@ -10,9 +10,9 @@
   
   </div>
   <div class="modal-body">
-    <h5>Welocome to the VOYAGER customer portal!</h5>
-    <p>Here you can Add, Delete, Update Travel Stories, that further helps to other travelers to make<br>
-    there journey memorable</p>
+    <h5>Welcome to the VOYAGER user portal!</h5>
+    <p>Here you can Add, Delete, Update Travel Stories, that will further help other travelers to make<br>
+    their journey memorable</p>
     <br>
     <a href="user_profile.php" class="primary-btn"><?php echo $user["fname"];  ?>'s Portal<span class="arrow_right"></span></a>
    

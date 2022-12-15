@@ -47,14 +47,13 @@
                                 <ul class="dropdown">
                                     <li><a href="./add_product.php">Add Products</a></li>
                                     <li><a href="./view_product.php">View Products</a></li>
-                                    <li><a href="#">Delete Products</a></li>
+                                    <li><a href="./view_product.php">Delete Products</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Travel Stories</a>
                                 <ul class="dropdown">
-                                    <!-- <li><a href="./about.html">Add Stories</a></li> -->
-                                    <!-- <li><a href="./shop-details.html">Update Stories</a></li> -->
-                                    <li><a href="./admin_delete_stories.php">Delete Stories</a></li>
+                                <li><a href="./admin_view_stories.php">View Stories</a></li>
+                                    <li><a href="./admin_view_stories.php">Delete Stories</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">User</a>
